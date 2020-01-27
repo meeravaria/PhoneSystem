@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBackOffice", "PhoneBackOffice\PhoneBackOffice.csproj", "{04610FBE-7D78-475A-AF1E-574F4E79EF90}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PhoneFrontOffice", "PhoneFrontOffice\", "{F48799D2-35C8-41CF-AA00-F51A1D6513E6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51038"
+		Debug.AspNetCompiler.PhysicalPath = "PhoneFrontOffice\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51038\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51038"
+		Release.AspNetCompiler.PhysicalPath = "PhoneFrontOffice\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51038\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51038"
+		SlnRelativePath = "PhoneFrontOffice\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneClasses", "PhoneClasses\PhoneClasses.csproj", "{181FFA08-5BC7-4AA1-9D7A-33EB43BB49AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone Testing", "Phone Testing\Phone Testing.csproj", "{05BDB052-4733-412A-9784-A7D94FB96C1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04610FBE-7D78-475A-AF1E-574F4E79EF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04610FBE-7D78-475A-AF1E-574F4E79EF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04610FBE-7D78-475A-AF1E-574F4E79EF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04610FBE-7D78-475A-AF1E-574F4E79EF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48799D2-35C8-41CF-AA00-F51A1D6513E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48799D2-35C8-41CF-AA00-F51A1D6513E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48799D2-35C8-41CF-AA00-F51A1D6513E6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48799D2-35C8-41CF-AA00-F51A1D6513E6}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{181FFA08-5BC7-4AA1-9D7A-33EB43BB49AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181FFA08-5BC7-4AA1-9D7A-33EB43BB49AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181FFA08-5BC7-4AA1-9D7A-33EB43BB49AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181FFA08-5BC7-4AA1-9D7A-33EB43BB49AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BDB052-4733-412A-9784-A7D94FB96C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BDB052-4733-412A-9784-A7D94FB96C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BDB052-4733-412A-9784-A7D94FB96C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BDB052-4733-412A-9784-A7D94FB96C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C3EF282-84F6-42FE-8056-ECE136C5B7BB}
+	EndGlobalSection
+EndGlobal
