@@ -11,48 +11,48 @@ namespace Phone_Testing
         public void InstanceOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //test to see that it exists 
-            Assert.IsNotNull(AnAddress); 
+            Assert.IsNotNull(APhone); 
         }
 
         [TestMethod]
         public void ActivePropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             Boolean TestData = true;
             //assign the data to the property
-            AnAddress.Active = TestData; 
+            APhone.Active = TestData; 
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Active, TestData);
+            Assert.AreEqual(APhone.Active, TestData);
         }
 
         [TestMethod]
         public void PhoneIDPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             Int32 TestData = 1;
             //assign the data to the property
-            AnAddress.PhoneID = TestData;
+            APhone.PhoneID = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.PhoneID, TestData);
+            Assert.AreEqual(APhone.PhoneID, TestData);
         }
 
         [TestMethod]
         public void CapacityPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
-             Int32 TestData = 128;
+            Int32 TestData = 128;
             //assign the data to the property
-            AnAddress.Capacity = TestData;
+            APhone.Capacity = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Capacity, TestData);
+            Assert.AreEqual(APhone.Capacity, TestData);
         }
 
 
@@ -60,39 +60,39 @@ namespace Phone_Testing
         public void PricePropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             Int32 TestData = 100;
             //assign the data to the property
-            AnAddress.Price = TestData;
+            APhone.Price = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Price, TestData);
+            Assert.AreEqual(APhone.Price, TestData);
         }
 
         [TestMethod]
         public void ColourPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             String TestData = "red";
             //assign the data to the property
-            AnAddress.Colour = TestData;
+            APhone.Colour = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Colour, TestData);
+            Assert.AreEqual(APhone.Colour, TestData);
         }
 
         [TestMethod]
         public void DateAddedPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
-            DateTime TestData = DateTime.Now.Date; 
+            DateTime TestData = DateTime.Now.Date;
             //assign the data to the property
-            AnAddress.DateAdded = TestData;
+            APhone.DateAdded = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.DateAdded, TestData);
+            Assert.AreEqual(APhone.DateAdded, TestData);
         }
 
 
@@ -100,57 +100,68 @@ namespace Phone_Testing
         public void DescriptionPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             String TestData = "This is the latest phone.";
             //assign the data to the property
-            AnAddress.Description = TestData;
+            APhone.Description = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Description, TestData);
+            Assert.AreEqual(APhone.Description, TestData);
         }
-
 
         [TestMethod]
         public void MakePropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             String TestData = "Apple";
             //assign the data to the property
-            AnAddress.Make = TestData;
+            APhone.Make = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Make, TestData);
+            Assert.AreEqual(APhone.Make, TestData);
         }
 
         [TestMethod]
         public void ModelPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             String TestData = "C3500";
             //assign the data to the property
-            AnAddress.Model = TestData;
+            APhone.Model = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.Model, TestData);
+            Assert.AreEqual(APhone.Model, TestData);
         }
 
         [TestMethod]
         public void StockStatusPropertyOK()
         {
             //create an instance of the class we want to create 
-            clsAddress AnAddress = new clsAddress();
+            clsPhone APhone = new clsPhone();
             //create some test data to assign to the property 
             Boolean TestData = true;
             //assign the data to the property
-            AnAddress.StockStatus = TestData;
+            APhone.StockStatus = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnAddress.StockStatus, TestData);
+            Assert.AreEqual(APhone.StockStatus, TestData);
         }
 
 
 
 
+     
+    
+
+
+
+
+
     }
+
+
+
+
+
 }
