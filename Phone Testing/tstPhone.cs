@@ -11,7 +11,7 @@ namespace Phone_Testing
         public void InstanceOK()
         {
             //create an instance of the class we want to create 
-            clsPhone APhone = new clsPhone();
+             clsPhone APhone = new clsPhone();
             //test to see that it exists 
             Assert.IsNotNull(APhone); 
         }
