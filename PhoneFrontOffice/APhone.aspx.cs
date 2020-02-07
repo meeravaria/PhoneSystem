@@ -16,17 +16,27 @@ public partial class APhone : System.Web.UI.Page
     {
         //create an instance of the class we want to create 
         clsPhone APhone = new clsPhone();
-        //capture the phone id
-        //APhone.PhoneID = txtPhoneID.Text;
+        //capture the model
+        APhone.Model = txtModel.Text;
+        //capture the make
+        APhone.Make = txtMake.Text;
+        //capture the capacity
+        APhone.Capacity = txtCapacity.Text;
+        //capture the price
+        APhone.Price = txtPrice.Text;
+        //capture the colour
+        APhone.Colour = txtColour.Text;
+        //capture the date added
+        APhone.DateAdded = txtDateAdded.Text;
+        //capture the stock status 
+        APhone.StockStatus = chkStockStatus.Text;
         //store the phone in the session object 
         Session["APhone"] = APhone;
         //redirect to the viewer page 
         Response.Redirect("APhoneViewer.aspx"); 
     
-        //create some test data to assign to the property 
-        Int32 TestData = 1;
-        //assign the data to the property
-        APhone.PhoneID = TestData;
+       
+       
        
     }
 }
