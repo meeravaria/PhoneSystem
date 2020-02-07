@@ -31,6 +31,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void PhoneIDPropertyOK()
+        //PhoneID Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -44,6 +45,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void CapacityPropertyOK()
+        //Capacity Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -58,6 +60,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void PricePropertyOK()
+        //Price Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -71,6 +74,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void ColourPropertyOK()
+        //Colour Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -84,6 +88,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void DateAddedPropertyOK()
+        //DateAdded Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -98,6 +103,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void DescriptionPropertyOK()
+        //Description Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -111,6 +117,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void MakePropertyOK()
+        //Make Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -124,6 +131,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void ModelPropertyOK()
+        //Model Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
@@ -137,6 +145,7 @@ namespace Phone_Testing
 
         [TestMethod]
         public void StockStatusPropertyOK()
+        //Stock Status Property 
         {
             //create an instance of the class we want to create 
             clsPhone APhone = new clsPhone();
