@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="tstPhoneCollection.cs" />
     <Compile Include="tstStaff.cs" />
     <Compile Include="tstPhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

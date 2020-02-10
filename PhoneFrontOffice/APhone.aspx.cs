@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using PhoneClasses;
 
 public partial class APhone : System.Web.UI.Page
 {
@@ -21,15 +22,15 @@ public partial class APhone : System.Web.UI.Page
         //capture the make
         APhone.Make = txtMake.Text;
         //capture the capacity
-        APhone.Capacity = txtCapacity.Text;
+        APhone.Capacity =Convert.ToInt32( txtCapacity.Text);
         //capture the price
-        APhone.Price = txtPrice.Text;
+        APhone.Price =Convert.ToDecimal( txtPrice.Text);
         //capture the colour
         APhone.Colour = txtColour.Text;
         //capture the date added
-        APhone.DateAdded = txtDateAdded.Text;
+        APhone.DateAdded =Convert.ToDateTime( txtDateAdded.Text);
         //capture the stock status 
-        APhone.StockStatus = chkStockStatus.Text;
+        APhone.StockStatus =Convert.ToBoolean( chkStockStatus.Text);
         //store the phone in the session object 
         Session["APhone"] = APhone;
         //redirect to the viewer page 
