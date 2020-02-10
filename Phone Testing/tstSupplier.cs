@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PhoneClasses;
 
 namespace Phone_Testing
 {
@@ -9,8 +10,8 @@ namespace Phone_Testing
         [TestMethod]
         public void InstanceOk()
         {
-            clsSupplier AnSupplier = new clsSupplier();
-            Assert.IsNotNull(AnSupplier);
+            clsSupplier ASupplier = new clsSupplier();
+            Assert.IsNotNull(ASupplier);
         }
     }
 }

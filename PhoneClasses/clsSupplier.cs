@@ -1,6 +1,6 @@
-﻿namespace Phone_Testing
+﻿namespace PhoneClasses
 {
-    class clsSupplier
+    public class clsSupplier
     {
     }
 }
