@@ -9,8 +9,8 @@ namespace Phone_Testing
         [TestMethod]
         public void InstanceOk()
         {
-            clsSupplier AnAddress = new clsSupplier();
-            Assert.IsNotNull(AnAddress);
+            clsSupplier AnSupplier = new clsSupplier();
+            Assert.IsNotNull(AnSupplier);
         }
     }
 }
