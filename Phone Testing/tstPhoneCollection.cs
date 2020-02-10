@@ -20,7 +20,6 @@ namespace Phone_Testing
 
         [TestMethod]
         public void PhoneListOK()
-        //Stock Status Property 
         {
             //create an instance of the class we want to create 
             clsPhoneCollection AllPhones = new clsPhoneCollection();
