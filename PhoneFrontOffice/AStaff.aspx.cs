@@ -24,4 +24,9 @@ public partial class AStaff : System.Web.UI.Page
         //redirect to the viewer page
         Response.Redirect("AStaffViewer.aspx");
     }
+
+    protected void Active_CheckedChanged(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -28,7 +28,7 @@
         <asp:TextBox ID="txtTelephone" runat="server" style="z-index: 1; left: 121px; top: 325px; position: absolute"></asp:TextBox>
         <asp:ListBox ID="lstCounty" runat="server" style="z-index: 1; left: 103px; top: 258px; position: absolute; height: 26px; width: 129px"></asp:ListBox>
         <asp:ListBox ID="lstGender" runat="server" style="z-index: 1; left: 107px; top: 166px; position: absolute; height: 22px; width: 133px"></asp:ListBox>
-        <asp:CheckBox ID="Active" runat="server" style="z-index: 1; left: 49px; top: 372px; position: absolute; right: 588px" />
+        <asp:CheckBox ID="Active" runat="server" style="z-index: 1; left: 49px; top: 372px; position: absolute; right: 721px" OnCheckedChanged="Active_CheckedChanged" />
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 55px; top: 404px; position: absolute" Text="lblError"></asp:Label>
         <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 164px; top: 368px; position: absolute; width: 58px" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 228px; top: 368px; position: absolute; margin-bottom: 0px" Text="Cancel" />
