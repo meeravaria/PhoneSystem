@@ -1,6 +1,6 @@
 ﻿namespace Phone_Testing
 {
-    class clsAddress
+    class clsSupplier
     {
     }
 }
