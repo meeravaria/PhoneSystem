@@ -12,9 +12,9 @@ namespace Phone_Testing
         {
 
             //create an instance of the class we want to create
-            clsAddress AnAddress = new clsAddress();
+            clsStaff AStaff = new clsStaff();
             //test to see that is exists 
-            Assert.IsNotNull(AnAddress);
+            Assert.IsNotNull(AStaff);
         }
 
         [TestMethod]
