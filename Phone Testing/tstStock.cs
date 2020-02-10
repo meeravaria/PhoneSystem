@@ -12,9 +12,9 @@ namespace Phone_Testing
         public void InstanceOK()
         {
             //create an instance of the new class we want to create
-            clsStock AnStock = new clsStock();
+            clsStock AStock = new clsStock();
             //test to see that it exists
-            Assert.IsNotNull(AnStock);
+            Assert.IsNotNull(AStock);
         }
     }
 }
