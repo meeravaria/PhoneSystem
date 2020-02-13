@@ -24,7 +24,7 @@
         <asp:TextBox ID="txtMake" runat="server" style="z-index: 1; left: 222px; top: 103px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtModel" runat="server" style="z-index: 1; left: 222px; top: 68px; position: absolute"></asp:TextBox>
         <asp:CheckBox ID="chkStockStatus" runat="server" style="z-index: 1; left: 262px; top: 283px; position: absolute" Text="Active" />
-        <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 227px; top: 333px; position: absolute; width: 60px;" Text="OK" />
+        <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 227px; top: 333px; position: absolute; width: 60px; height: 26px;" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 311px; top: 331px; position: absolute" Text="Cancel" />
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 173px; top: 398px; position: absolute" Text="lblError"></asp:Label>
     </form>
