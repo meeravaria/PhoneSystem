@@ -34,48 +34,56 @@ namespace PhoneClasses
             set
             {
                 //we shall worry about this later
-               
+
             }
         }
 
-    
+
 
         public clsPhone ThisPhone { get; set; }
 
+        ///**************ERROR HERE*********************** 
 
-        public clsPhoneCollection()
-        {
-            //create the items of test data
-            clsPhone TestItem = new clsPhone();
-            //set its properties 
-            TestItem.Active = true;
-            TestItem.PhoneID = 1;
-            TestItem.Capacity = 128;
-            TestItem.Price = 100;
-            TestItem.Colour = "red";
-            TestItem.DateAdded = DateTime.Now.Date; 
-            TestItem.Description = "This is the latest phone.";
-            TestItem.Make = "Apple";
-            TestItem.Model = "C3500";
-            TestItem.StockStatus = true;
-            //add the item to the test list 
-            mPhoneList.Add(TestItem);
-            //re initialise the object for some new data 
-            TestItem = new clsPhone();
-            //set its properties 
-            TestItem.Active = true;
-            TestItem.PhoneID = 2;
-            TestItem.Capacity = 64;
-            TestItem.Price = 30;
-            TestItem.Colour = "blue";
-            TestItem.DateAdded = DateTime.Now.Date;
-            TestItem.Description = "This is an old phone.";
-            TestItem.Make = "Samsung";
-            TestItem.Model = "S11";
-            TestItem.StockStatus = true;
-            //add the item to the list 
-            mPhoneList.Add(TestItem); 
-        }
+        //public clsPhoneCollection()
+        //{
+        //    //var for the index
+        //    Int32 Index = 0;
+        //    //var to store the record count 
+        //    Int32 RecordCount = 0;
+        //    //object for the data connection 
+        //    clsDataConnection DB = new clsDataConnection();
+        //    //execute the store procedure 
+        //    DB.Execute("sproc_tblPhone_SelectAll");
+        //    //get the count of records
+        //    RecordCount = DB.Count;
+        //    //while there are records to process 
+        //    while (Index < RecordCount)
+        //    {
+        //        //create a blank address 
+        //        clsPhone APhone = new clsPhone();
+        //        //read in the fields from the current record
+        //        APhone.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+        //        APhone.PhoneID = Convert.ToInt32(DB.DataTable.Rows[Index]["PhoneID"]);
+        //        APhone.Capacity = Convert.ToInt32(DB.DataTable.Rows[Index]["Capacity"]);
+        //        APhone.Price = Convert.ToDecimal(DB.DataTable.Rows[Index]["Price"]);
+        //        APhone.Colour = Convert.ToString(DB.DataTable.Rows[Index]["Colour"]);
+        //        APhone.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+        //        APhone.Description = Convert.ToString(DB.DataTable.Rows[Index]["Description"]);
+        //        APhone.Make = Convert.ToString(DB.DataTable.Rows[Index]["Make"]);
+        //        APhone.Model = Convert.ToString(DB.DataTable.Rows[Index]["Model"]);
+        //        APhone.StockStatus = Convert.ToBoolean(DB.DataTable.Rows[Index]["StockStatus"]);
+        //        //add the record to the private data member 
+        //        mPhoneList.Add(APhone);
+        //        //point at the next record
+        //        Index++;
+        //    }
+
+
+
+
+
+        //}
+
 
 
 
