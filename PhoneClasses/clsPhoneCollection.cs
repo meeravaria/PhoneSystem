@@ -42,7 +42,7 @@ namespace PhoneClasses
 
         public clsPhone ThisPhone { get; set; }
 
-        ///**************ERROR HERE*********************** 
+   
 
         public clsPhoneCollection()
         {
@@ -73,10 +73,17 @@ namespace PhoneClasses
                 APhone.Model = Convert.ToString(DB.DataTable.Rows[Index]["Model"]);
                 APhone.StockStatus = Convert.ToBoolean(DB.DataTable.Rows[Index]["StockStatus"]);
                 //add the record to the private data member 
-                mPhoneList.Add(APhone);
+              mPhoneList.Add(APhone);
                 //point at the next record
                 Index++;
             }
+
+
+
+
+
+
+
 
 
 
