@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace PhoneClasses
 {
@@ -36,48 +37,53 @@ namespace PhoneClasses
             }
         }
 
-        
+
         public clsStaff ThisStaff { get; set; }
 
         //constructor for the class
         public clsStaffCollection()
         {
-            //create the items of the test data
-            clsStaff TestItem = new clsStaff();
-            //set its properties
-            TestItem.Active = true;
-            TestItem.CountyNo = 1;
-            TestItem.StaffID = 1;
-            TestItem.DateOfBirth = "25/12/1996";
-            TestItem.FirstName = "Meera";
-            TestItem.LastName = "Varia";
-            TestItem.Gender = true;
-            TestItem.PostCode = "LE3 OGH";
-            TestItem.Street = "Gosling Street";
-            TestItem.Telephone = 0123456789;
-            //add the item to the test list 
-            mStaffList.Add(TestItem);
-            //re initalise the object for some new data
-            TestItem = new clsStaff();
-            //set its properties 
-            TestItem.Active = true;
-            TestItem.CountyNo = 1;
-            TestItem.StaffID = 1;
-            TestItem.DateOfBirth = "21/01/1998";
-            TestItem.FirstName = "Mati";
-            TestItem.LastName = "Nitharsan";
-            TestItem.Gender = true;
-            TestItem.PostCode = "LE2 7FZ";
-            TestItem.Street = "Lineker Road";
-            TestItem.Telephone = 0987654321;
-            //add the item to the test list
-            mStaffList.Add(TestItem);
 
-            
+            //******ERROR IS HERE WHICH IS CAUSING TEST FAILURE OF SOME OF THE PROPERTIES - WAS WORKING BEFORE I ADDED THIS CODE****
+
+            ////var for the index
+            //Int32 Index = 0;
+            ////var to store the record count
+            //Int32 RecordCount = 0;
+            ////object for data connection
+            //clsDataConnection DB = new clsDataConnection();
+            ////execute the stored procedure
+            //DB.Execute("sproc_tblStaff_SelectAll");
+            ////get the count of records 
+            //RecordCount = DB.Count;
+            ////while there are records to process
+            //while (Index < RecordCount)
+            //{
+            //    //create a blank staff
+            //    clsStaff AStaff = new clsStaff();
+            //    //read in the fields from the current records
+            //    AStaff.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+            //    AStaff.County = Convert.ToString(DB.DataTable.Rows[Index]["County"]);
+            //    AStaff.StaffID =Convert.ToInt32(DB.DataTable.Rows[Index]["StaffID"]);
+            //    AStaff.DateOfBirth = Convert.ToString(DB.DataTable.Rows[Index]["DateOfBirth"]);
+            //    AStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+            //    AStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+            //    AStaff.Gender = Convert.ToBoolean(DB.DataTable.Rows[Index]["Gender"]);
+            //    AStaff.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
+            //    AStaff.Street = Convert.ToString(DB.DataTable.Rows[Index]["Street"]);
+            //    AStaff.Telephone = Convert.ToInt32(DB.DataTable.Rows[Index]["Telephone"]);
+            //    //add the record to the private data member
+            //    mStaffList.Add(AStaff);
+            //    //point at the next record
+            //    Index++;
+
+
+              
             }
-            
+
         }
 
     }
+
 
    

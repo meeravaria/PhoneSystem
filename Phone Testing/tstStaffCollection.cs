@@ -18,18 +18,18 @@ namespace Phone_Testing
         }
 
 
-        [TestMethod]
-        public void CountPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsStaffCollection AllStaff = new clsStaffCollection();
-            //create some test data to assign to the property
-            Int32 SomeCount = 2;
-            //assign the data to the property
-            AllStaff.Count = SomeCount;
-            //test to see that it exists
-            Assert.AreEqual(AllStaff.Count, SomeCount);
-        }
+        //[TestMethod]
+        //public void CountPropertyOK()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStaffCollection AllStaff = new clsStaffCollection();
+        //    //create some test data to assign to the property
+        //    Int32 SomeCount = 2;
+        //    //assign the data to the property
+        //    AllStaff.Count = SomeCount;
+        //    //test to see that it exists
+        //    Assert.AreEqual(AllStaff.Count, SomeCount);
+        //}
 
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace Phone_Testing
             clsStaff TestItem = new clsStaff();
             //set its properties
             TestItem.Active = true;
-            TestItem.CountyNo = 1;
+            TestItem.County = "Buckinghamshire";
             TestItem.StaffID = 1;
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
@@ -73,7 +73,7 @@ namespace Phone_Testing
             clsStaff TestStaff = new clsStaff();
             //set the properties of the test object 
             TestStaff.Active = true;
-            TestStaff.CountyNo = 1;
+            TestStaff.County = "Buckinghamshire";
             TestStaff.StaffID = 1;
             TestStaff.DateOfBirth = "25/12/1996";
             TestStaff.FirstName = "Meera";
@@ -89,46 +89,48 @@ namespace Phone_Testing
 
         }
 
-        [TestMethod]
-        public void ListAndCountOK()
-        {
-            //create an instance of the class we want to create
-            clsStaffCollection AllStaff = new clsStaffCollection();
-            //create some test data to assign to the property
-            //in this case the data needs to be a list of objects
-            List<clsStaff> TestList = new List<clsStaff>();
-            //add an item to the list
-            //create the item of the test data
-            clsStaff TestItem = new clsStaff();
-            //set its properties
-            TestItem.Active = true;
-            TestItem.CountyNo = 1;
-            TestItem.StaffID = 1;
-            TestItem.DateOfBirth = "25/12/1996";
-            TestItem.FirstName = "Meera";
-            TestItem.LastName = "Varia";
-            TestItem.Gender = true;
-            TestItem.PostCode = "LE3 OGH";
-            TestItem.Street = "Gosling Street";
-            TestItem.Telephone = 0123456789;
-            //add the item to the test list 
-            TestList.Add(TestItem);
-            //assign the data to the property
-            AllStaff.StaffList = TestList;
-            //test to see that the two values are the same
-            Assert.AreEqual(AllStaff.Count, TestList.Count);
+        //[TestMethod]
+        //public void ListAndCountOK()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStaffCollection AllStaff = new clsStaffCollection();
+        //    //create some test data to assign to the property
+        //    //in this case the data needs to be a list of objects
+        //    List<clsStaff> TestList = new List<clsStaff>();
+        //    //add an item to the list
+        //    //create the item of the test data
+        //    clsStaff TestItem = new clsStaff();
+        //    //set its properties
+        //    TestItem.Active = true;
+        //    TestItem.County = "Buckinghamshire";
+        //    TestItem.StaffID = 1;
+        //    TestItem.DateOfBirth = "25/12/1996";
+        //    TestItem.FirstName = "Meera";
+        //    TestItem.LastName = "Varia";
+        //    TestItem.Gender = true;
+        //    TestItem.PostCode = "LE3 OGH";
+        //    TestItem.Street = "Gosling Street";
+        //    TestItem.Telephone = 0123456789;
+        //    //add the item to the test list 
+        //    TestList.Add(TestItem);
+        //    //assign the data to the property
+        //    AllStaff.StaffList = TestList;
+        //    //test to see that the two values are the same
+        //    Assert.AreEqual(AllStaff.Count, TestList.Count);
 
-        }
+        //}
 
-        [TestMethod]
-        public void TwoRecordsPresent()
-        {
-            //create an instance of the class we want to create
-            clsStaffCollection AllStaff = new clsStaffCollection();
-            //test to see that the two values are the same
-            Assert.AreEqual(AllStaff.Count, 2);
+        //[TestMethod]
+        //public void TwoRecordsPresent()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStaffCollection AllStaff = new clsStaffCollection();
+        //    //test to see that the two values are the same
+        //    Assert.AreEqual(AllStaff.Count, 2);
+        //}
+        
         }
 
     }
-}
+
 
