@@ -31,7 +31,7 @@ public partial class _Default : System.Web.UI.Page
         //set the name of the primary key 
         lstPhones.DataValueField = "PhoneID";
         //set the data field to display 
-        lstPhones.DataTextField = "Phone";
+        lstPhones.DataTextField = "PhoneID";
         //bind the data to the list 
         lstPhones.DataBind(); 
     }
