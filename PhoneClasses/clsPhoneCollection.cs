@@ -5,8 +5,11 @@ namespace PhoneClasses
 {
     public class clsPhoneCollection
     {
+       
         //private data member for the list 
         List<clsPhone> mPhoneList = new List<clsPhone>();
+        //private data member thisPhone 
+        clsPhone mThisPhone = new clsPhone(); 
 
         //public property for the address list 
         public List<clsPhone> PhoneList
@@ -40,23 +43,101 @@ namespace PhoneClasses
 
 
 
-        public clsPhone ThisPhone { get; set; }
+        public clsPhone ThisPhone
+        {
+            get
+            {
+                //return the private data 
+                return mThisPhone;
+            }
 
-   
+            set
+            {
+                //set the private data 
+                mThisPhone = value;
+            }
+        }
+
+        public int Add()
+        {
+            //adds a mew record to the database based on the values of mThisPhone 
+            //connect to the database 
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure 
+            DB.AddParameter("@Capacity", mThisPhone.Capacity);
+            DB.AddParameter("@Price", mThisPhone.Price);
+            DB.AddParameter("@Colour", mThisPhone.Colour);
+            DB.AddParameter("@DateAdded", mThisPhone.DateAdded);
+            DB.AddParameter("@Description", mThisPhone.Description);
+            DB.AddParameter("@Make", mThisPhone.Make);
+            DB.AddParameter("@Model", mThisPhone.Model);
+            DB.AddParameter("@StockStatus", mThisPhone.StockStatus);
+            DB.AddParameter("@Active", mThisPhone.Active);
+            //execute the query returning the primary key value 
+            return DB.Execute("sproc_tblPhone_Insert");
+        }
+
+
+        public void Delete ()
+        {
+            //deletes the record pointed to by thisPhone
+            //connect to the database 
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure 
+            DB.AddParameter("@PhoneID", mThisPhone.PhoneID);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblPhone_Delete"); 
+        }
+
+        public void Update()
+        {
+            //update an existing record based on the values of thisPhone
+            //connect to the database 
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure 
+            DB.AddParameter("@PhoneID", mThisPhone.PhoneID);
+            DB.AddParameter("@Capacity", mThisPhone.Capacity);
+            DB.AddParameter("@Price", mThisPhone.Price);
+            DB.AddParameter("@Colour", mThisPhone.Colour);
+            DB.AddParameter("@DateAdded", mThisPhone.DateAdded);
+            DB.AddParameter("@Description", mThisPhone.Description);
+            DB.AddParameter("@Make", mThisPhone.Make);
+            DB.AddParameter("@Model", mThisPhone.Model);
+            DB.AddParameter("@StockStatus", mThisPhone.StockStatus);
+            DB.AddParameter("@Active", mThisPhone.Active);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblPhone_Update");
+        }
 
         public clsPhoneCollection()
         {
-            //var for the index
-            Int32 Index = 0;
-            //var to store the record count 
-            Int32 RecordCount = 0;
+          
             //object for the data connection 
             clsDataConnection DB = new clsDataConnection();
             //execute the store procedure 
             DB.Execute("sproc_tblPhone_SelectAll");
+            //populate the array list with the data table 
+            PopulateArray(DB); 
+            
+
+        }
+
+
+
+
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count 
+            Int32 RecordCount;
             //get the count of records
             RecordCount = DB.Count;
-            //while there are records to process 
+            //clear the private array list 
+            mPhoneList = new List<clsPhone>(); 
+            //while there are records to process
             while (Index < RecordCount)
             {
                 //create a blank address 
@@ -73,30 +154,24 @@ namespace PhoneClasses
                 APhone.Model = Convert.ToString(DB.DataTable.Rows[Index]["Model"]);
                 APhone.StockStatus = Convert.ToBoolean(DB.DataTable.Rows[Index]["StockStatus"]);
                 //add the record to the private data member 
-              mPhoneList.Add(APhone);
+                mPhoneList.Add(APhone);
                 //point at the next record
                 Index++;
             }
 
-
-
-
-
-
-
-
-
-
         }
 
-
-
-
-
-
-
-
-
-
+        public void ReportByMake(string Make)
+        {
+            //filters the records based on full or partial make
+            //connect to the database 
+            clsDataConnection DB = new clsDataConnection();
+            //send the Make parameter to the database 
+            DB.AddParameter("@Make", Make);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblPhone_FilterByMake");
+            //populate the array list with the data table 
+            PopulateArray(DB); 
+        }
     }
 }

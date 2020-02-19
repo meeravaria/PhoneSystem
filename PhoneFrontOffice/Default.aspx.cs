@@ -7,19 +7,21 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    Int32 PhoneID; 
+
     //this function handles the load event for the page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if this is the first time the page is displayed
+        //get the number of phone to be processed
+        PhoneID = Convert.ToInt32(Session["PhoneID"]); 
         if (IsPostBack == false)
         {
-            //update the list box
-            DisplayStaff();
-            DisplayPhones();
+            //populate the list of phones
+            DisplayPhones(); 
         }
 
-
+       
     }
 
     void DisplayPhones()
@@ -48,6 +50,63 @@ public partial class _Default : System.Web.UI.Page
         lstStaff.DataTextField = "FirstName";
         //bind the data to the list
         lstStaff.DataBind();
+    }
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        //store -1 into the session object to indicate this is new record 
+        Session["AddressNo"] = -1;
+        //redirect to the data entry page
+        Response.Redirect("APhone.aspx"); 
+    }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnDelete_Click1(object sender, EventArgs e)
+    {
+        //var to store the primary key value of the record to be deleted 
+        Int32 PhoneID; 
+        //if a record has been selected from the list 
+        if (lstPhones.SelectedIndex != -1)
+        {
+            //get the primary key of the record to delete 
+            PhoneID = Convert.ToInt32(lstPhones.SelectedValue);
+            //store the data in the session object 
+            Session["PhoneID"] = PhoneID;
+            //redirect to the delete page 
+            Response.Redirect("Delete.aspx"); 
+        }
+        //if no record has been selected
+        else
+        {
+            //display an error 
+            lblError.Text = "Please select a record to delete from the list"; 
+        }
+    }
+
+    protected void btnEdit_Click(object sender, EventArgs e)
+    {
+        //var to store the primary key value of the record to be deleted 
+        Int32 PhoneID;
+        //if a record has been selected from the list 
+        if (lstPhones.SelectedIndex != -1)
+        {
+            //get the primary key of the record to delete 
+            PhoneID = Convert.ToInt32(lstPhones.SelectedValue);
+            //store the data in the session object 
+            Session["PhoneID"] = PhoneID;
+            //redirect to the delete page 
+            Response.Redirect("APhone.aspx");
+        }
+        //if no record has been selected
+        else
+        {
+            //display an error 
+            lblError.Text = "Please select a record to update from the list";
+        }
     }
 }
 
