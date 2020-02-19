@@ -35,9 +35,7 @@ public partial class APhone : System.Web.UI.Page
         Session["APhone"] = APhone;
         //redirect to the viewer page 
         Response.Redirect("APhoneViewer.aspx"); 
-    
-       
-       
-       
+   
     }
+    
 }
