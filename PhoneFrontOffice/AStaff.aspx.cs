@@ -35,7 +35,7 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff system
         clsStaffCollection StaffSystem = new clsStaffCollection();
         //find the record to update
-        //StaffSystem.ThisStaff.Find(StaffID);
+        StaffSystem.ThisStaff.Find(StaffID);
         //display the data for this record 
         txtDOB.Text = StaffSystem.ThisStaff.DateOfBirth;
         txtFirstName.Text = StaffSystem.ThisStaff.FirstName;
@@ -51,7 +51,7 @@ public partial class AStaff : System.Web.UI.Page
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
-        /*//create a new instance of clsStaff
+        //create a new instance of clsStaff
         clsStaff AStaff = new clsStaff();
         //capture the StaffID
         AStaff.StaffID = Convert.ToInt32(txtStaffID.Text);
@@ -67,7 +67,7 @@ public partial class AStaff : System.Web.UI.Page
         //store the staff in the session object 
         Session["AStaff"] = AStaff;
         //redirect to the viewer page
-        Response.Redirect("AStaffViewer.aspx");*/
+        Response.Redirect("AStaffViewer.aspx");
 
         if (StaffID == -1)
         {
@@ -90,7 +90,7 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff 
         clsStaffCollection StaffSystem = new clsStaffCollection();
         //validate the data on the web forms
-        String Error = "";// StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
+        String Error =  StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -123,7 +123,7 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff
         PhoneClasses.clsStaffCollection StaffSystem = new PhoneClasses.clsStaffCollection();
         //validate the data on the web form
-        String Error = "";// StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
+        String Error = StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
         //if the data is ok then add it to the object
         if (Error == "")
         {
