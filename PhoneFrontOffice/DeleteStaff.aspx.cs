@@ -35,6 +35,6 @@ public partial class DeleteStaff : System.Web.UI.Page
         //delete he record 
         Delete_Staff();
         //redirect back to the main page
-        Response.Redirect("Default.aspx");
+        Response.Redirect("DefaultStaff.aspx");
     }
 }

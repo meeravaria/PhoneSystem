@@ -37,48 +37,16 @@ public partial class DefaultStaff : System.Web.UI.Page
         lstStaff.DataBind();
     }
 
-    protected void lstStaff_SelectedIndexChanged1(object sender, EventArgs e)
+    protected void btnAdd_Click(object sender, EventArgs e)
     {
-      
-    }
-
-    protected void btnApply_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void btnDisplayAll_Click(object sender, EventArgs e)
-    {
+        //store -1 into the session object to indicate this is a new record
+        Session["StaffID"] = -1;
+        //redirect to the data entry page
+        Response.Redirect("AStaff.aspx");
 
     }
 
-    protected void btnAdd_Click1(object sender, EventArgs e)
-    {
-      
-    }
-
-    protected void btnDelete_Click(object sender, EventArgs e)
-    {
-        //var to store the primary key value of the record to be deleted
-        Int32 StaffID;
-        //if a record has been selected from the list
-        if (lstStaff.SelectedIndex != -1)
-        {
-            //get the primary key value of the record to delete
-            StaffID = Convert.ToInt32(lstStaff.SelectedValue);
-            //store the data in the session object
-            Session["StaffID"] = StaffID;
-            //redirect to the delete page
-            Response.Redirect("Delete.aspx");
-        }
-        else //if no record has been selected
-        {
-            //display and errpr
-            lblError.Text = "Please select a record to delete from the list";
-        }
-    }
-
-    protected void btnEdit_Click(object sender, EventArgs e)
+    protected void btnEdit_Click1(object sender, EventArgs e)
     {
         //var to store the primary key value of the record to be deleted 
         Int32 StaffID;
@@ -99,6 +67,67 @@ public partial class DefaultStaff : System.Web.UI.Page
             lblError.Text = "Please select a record to update from the list";
         }
     }
+
+
+
+    protected void btnDelete_Click1(object sender, EventArgs e)
+    {
+        //var to store the primary key value of the record to be deleted
+        Int32 StaffID;
+        //if a record has been selected from the list
+        if (lstStaff.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            StaffID = Convert.ToInt32(lstStaff.SelectedValue);
+            //store the data in the session object
+            Session["StaffID"] = StaffID;
+            //redirect to the delete page
+            Response.Redirect("DeleteStaff.aspx");
+        }
+        else //if no record has been selected
+        {
+            //display and errpr
+            lblError.Text = "Please select a record to delete from the list";
+        }
+    }
+
+    protected void btnDisplayAll_Click1(object sender, EventArgs e)
+    {
+
+    }
+    
+     
+    
+    //protected void lstStaff_SelectedIndexChanged1(object sender, EventArgs e)
+    
+    //{
+      
+    //}
+
+    //protected void btnApply_Click(object sender, EventArgs e)
+    //{
+
+    //}
+
+    //protected void btnDisplayAll_Click(object sender, EventArgs e)
+    //{
+
+    //}
+
+    //protected void btnAdd_Click1(object sender, EventArgs e)
+    //{
+      
+    //}
+
+    //protected void btnDelete_Click(object sender, EventArgs e)
+    //{
+       
+    //}
+
+    //protected void btnEdit_Click(object sender, EventArgs e)
+    //{
+        
+    //}
 }
 
    
