@@ -15,7 +15,6 @@ namespace PhoneClasses
         public string Model { get; set; }
         public bool StockStatus { get; set; }
 
-
-
+        
     }
 }
