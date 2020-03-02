@@ -175,21 +175,36 @@ namespace PhoneClasses
 
         public bool Find(int PhoneID)
         {
-            //set the private data member to the test data value 
-            mPhoneID = 1;
-            mActive = true;
-            mCapacity = 128;
-            mPrice = 100.00m;
-            mColour = "Black";
-            mDateAdded = Convert.ToDateTime("13/02/2020");
-            mDescription = "A";
-            mMake = "Apple";
-            mModel = "11 Pro";
-            mStockStatus = true; 
-                 
+            //create an instance of the data connection 
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the phone id to search for
+            DB.AddParameter("@PhoneID", PhoneID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblPhone_FilterByPhoneID"); 
+            //if one record is found (there should be either one or zero)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members 
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                mPhoneID = Convert.ToInt32(DB.DataTable.Rows[0]["PhoneID"]);
+                mCapacity = Convert.ToInt32(DB.DataTable.Rows[0]["Capacity"]);
+                mPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["Price"]);
+                mColour = Convert.ToString(DB.DataTable.Rows[0]["Colour"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
+                mMake = Convert.ToString(DB.DataTable.Rows[0]["Make"]);
+                mModel = Convert.ToString(DB.DataTable.Rows[0]["Model"]);
+                mStockStatus = Convert.ToBoolean(DB.DataTable.Rows[0]["StockStatus"]);
+                //return that everything worked OK 
+                return true; 
 
-            //always return true
-            return true; 
+            }
+            else
+            {
+                //return false indicating a problem 
+                return false; 
+            }
+                 
         }
 
         public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, bool checked1, bool checked2)

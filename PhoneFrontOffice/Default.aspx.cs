@@ -50,7 +50,7 @@ public partial class _Default : System.Web.UI.Page
             //store the data in the session object 
             Session["PhoneID"] = PhoneID;
             //redirect to the delete page 
-            Response.Redirect("Delete.aspx"); 
+            Response.Redirect("PhoneDelete.aspx"); 
         }
         //if no record has been selected
         else
@@ -88,6 +88,13 @@ public partial class _Default : System.Web.UI.Page
     protected void lstPhones_SelectedIndexChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        Session["PhoneID"] = -1;
+        //redirect to the data entry page 
+        Response.Redirect("APhone.aspx");
     }
 }
 
