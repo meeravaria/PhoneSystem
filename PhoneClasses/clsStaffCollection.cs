@@ -122,9 +122,46 @@ namespace PhoneClasses
          
 
             }
+        
+
+
+    void PopulateArray(clsDataConnection DB)
+    {
+        //populates the array list based on the data table in the parameter DB
+        //var for the index
+        Int32 Index = 0;
+        //var to store the record count 
+        Int32 RecordCount;
+        //get the count of records
+        RecordCount = DB.Count;
+        //clear the private array list 
+        mStaffList = new List<clsStaff>();
+        //while there are records to process
+        while (Index < RecordCount)
+        {
+            //create a blank address 
+            clsStaff AStaff = new clsStaff();
+            //read in the fields from the current record
+            AStaff.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+            AStaff.StaffID = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffID"]);
+            AStaff.County = Convert.ToString(DB.DataTable.Rows[Index]["County"]);
+            AStaff.Street = Convert.ToString(DB.DataTable.Rows[Index]["Street"]);
+            AStaff.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
+            AStaff.DateOfBirth = Convert.ToString(DB.DataTable.Rows[Index]["DateOfBirth"]);
+            AStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+            AStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+            AStaff.Gender = Convert.ToBoolean(DB.DataTable.Rows[Index]["Gender"]);
+            AStaff.Telephone = Convert.ToInt32(DB.DataTable.Rows[Index]["Telephone"]);
+            //add the record to the private data member 
+            mStaffList.Add(AStaff);
+            //point at the next record
+            Index++;
         }
 
-        public void ReportByPostCode (string PostCode)
+    }
+
+    
+    public void ReportByPostCode (string PostCode)
         {
             //filter the records based on a full or partial postcode
             //connect to the database
@@ -133,12 +170,12 @@ namespace PhoneClasses
             DB.AddParameter("@PostCode", PostCode);
             //execute the stored procedure 
             DB.Execute("sproc_tblStaff_FilterByPostCode");
-        //populate the array list with the data table 
-        PopulateArray(DB);
+            //populate the array list with the data table 
+            PopulateArray(DB);
         }
 
     }
-
+}
 
 
    

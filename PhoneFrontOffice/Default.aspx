@@ -10,9 +10,8 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:ListBox ID="lstStaff" runat="server" style="z-index: 1; left: 536px; top: 57px; position: absolute; height: 247px; width: 257px"></asp:ListBox>
-        <asp:ListBox ID="lstPhones" runat="server" style="z-index: 1; left: 23px; top: 64px; position: absolute; height: 281px; width: 236px" BackColor="#BFDFFF"></asp:ListBox>
-        <asp:Button ID="btnAdd" runat="server" BackColor="#99CCFF" BorderStyle="Solid" OnClick="btnAdd_Click" style="z-index: 1; left: 32px; top: 511px; position: absolute; height: 26px; width: 74px" Text="ADD" />
+        <asp:ListBox ID="lstPhones" runat="server" style="z-index: 1; left: 23px; top: 64px; position: absolute; height: 281px; width: 236px" BackColor="#BFDFFF" OnSelectedIndexChanged="lstPhones_SelectedIndexChanged"></asp:ListBox>
+        <asp:Button ID="btnAdd" runat="server" BackColor="#99CCFF" BorderStyle="Solid" style="z-index: 1; left: 32px; top: 511px; position: absolute; height: 26px; width: 74px; right: 503px;" Text="ADD" />
         <asp:Button ID="btnEdit" runat="server" BackColor="#99CCFF" BorderStyle="Solid" style="z-index: 1; left: 109px; top: 511px; position: absolute; width: 74px; margin-bottom: 0px" Text="EDIT" OnClick="btnEdit_Click" />
         <asp:Button ID="btnApply" runat="server" BackColor="#99CCFF" BorderStyle="Solid" style="z-index: 1; left: 28px; top: 468px; position: absolute; width: 109px" Text="APPLY" />
         <asp:Button ID="btnDisplayAll" runat="server" BackColor="#99CCFF" BorderStyle="Solid" style="z-index: 1; top: 466px; position: absolute; width: 111px; left: 150px" Text="DISPLAY ALL" />

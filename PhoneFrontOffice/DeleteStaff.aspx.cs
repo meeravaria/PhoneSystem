@@ -18,13 +18,13 @@ public partial class DeleteStaff : System.Web.UI.Page
         StaffID = Convert.ToInt32(Session["StaffID"]);
     }
 
-    void DeleteStaff()
+    void Delete_Staff()
     {
         //function to delete the selected record
         //create a new instance of the staff
         clsStaffCollection Staff = new clsStaffCollection();
         //find the record to delete
-        Staff.ThisStaff.Find(StaffID);
+        //Staff.ThisStaff.Find(StaffID);
         //delete the record 
         Staff.Delete();
     }
@@ -33,7 +33,7 @@ public partial class DeleteStaff : System.Web.UI.Page
     protected void btnYes_Click(object sender, EventArgs e)
     {
         //delete he record 
-        DeleteStaff();
+        Delete_Staff();
         //redirect back to the main page
         Response.Redirect("Default.aspx");
     }

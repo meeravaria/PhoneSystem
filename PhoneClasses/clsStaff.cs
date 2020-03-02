@@ -1,4 +1,6 @@
-﻿namespace PhoneClasses
+﻿using System;
+
+namespace PhoneClasses
 {
     public class clsStaff
     {

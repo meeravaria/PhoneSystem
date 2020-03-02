@@ -19,7 +19,7 @@ public partial class AStaff : System.Web.UI.Page
         if(IsPostBack == false)
         {
             //populate the list of staff
-            DisplayFirstName();
+            DisplayStaff();
             //if this is not a new record
             if (StaffID !=1)
             {
@@ -29,46 +29,13 @@ public partial class AStaff : System.Web.UI.Page
         }
     }
 
-    void PopulateArray(clsDataConnection DB)
-    {
-        //populate the array list based on the data table in the parameter DB 
-        //var for the index
-        Int32 Index = 0;
-        //var to store the record count
-        Int32 RecordCount = 0;
-        //get the count of records 
-        RecordCount = DB.Count;
-        //clear the private array list
-        mStaffList = new List<clsStaff>();
-        //while there are records to process
-        while (Index < RecordCount)
-        {
-            //create a blank staff
-            clsStaff AStaff = new clsStaff();
-            //read in the fields from the current records
-            AStaff.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
-            AStaff.County = Convert.ToString(DB.DataTable.Rows[Index]["County"]);
-            AStaff.StaffID = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffID"]);
-            AStaff.DateOfBirth = Convert.ToString(DB.DataTable.Rows[Index]["DateOfBirth"]);
-            AStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
-            AStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
-            AStaff.Gender = Convert.ToBoolean(DB.DataTable.Rows[Index]["Gender"]);
-            AStaff.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
-            AStaff.Street = Convert.ToString(DB.DataTable.Rows[Index]["Street"]);
-            AStaff.Telephone = Convert.ToInt32(DB.DataTable.Rows[Index]["Telephone"]);
-            //add the record to the private data member
-            mStaffList.Add(AStaff);
-            //point at the next record
-            Index++;
-        }
-
 
     void DisplayStaff()
     {
         //create an instance of the staff system
         clsStaffCollection StaffSystem = new clsStaffCollection();
         //find the record to update
-        StaffSystem.ThisStaff.Find(StaffID);
+        //StaffSystem.ThisStaff.Find(StaffID);
         //display the data for this record 
         txtDOB.Text = StaffSystem.ThisStaff.DateOfBirth;
         txtFirstName.Text = StaffSystem.ThisStaff.FirstName;
@@ -123,7 +90,7 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff 
         clsStaffCollection StaffSystem = new clsStaffCollection();
         //validate the data on the web forms
-        String Error = StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
+        String Error = "";// StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -156,12 +123,12 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff
         PhoneClasses.clsStaffCollection StaffSystem = new PhoneClasses.clsStaffCollection();
         //validate the data on the web form
-        String Error = StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
+        String Error = "";// StaffSystem.ThisStaff.Valid(txtFirstName.Text, txtLastName.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
         //if the data is ok then add it to the object
         if (Error == "")
         {
             //find the record to update
-            StaffSystem.ThisStaff.Find(StaffID);
+            //StaffSystem.ThisStaff.Find(StaffID);
             //get the data entered by the user
             StaffSystem.ThisStaff.County = lstCounty.Text;
             StaffSystem.ThisStaff.FirstName = txtFirstName.Text;
