@@ -160,6 +160,25 @@ namespace Phone_Testing
             Assert.AreEqual(APhone.StockStatus, TestData);
         }
 
+
+        [TestMethod]
+        public void FindMethodOK()
+        //Find Method
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //boolean variable to store the result of the validation 
+            Boolean Found = false;
+            //create some test data to use with the method 
+            Int32 PhoneID = 1;
+            //invoke the method 
+            Found = APhone.Find(PhoneID);
+            //test to see that the result is correct 
+            Assert.IsTrue(Found);
+
+        }
+
+
         [TestMethod]
         public void PhoneNoFound()
         //Phone No Found Method

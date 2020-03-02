@@ -25,7 +25,7 @@
         <asp:TextBox ID="txtModel" runat="server" style="z-index: 1; left: 220px; top: 297px; position: absolute" BackColor="#B9DCFF"></asp:TextBox>
         <asp:CheckBox ID="chkStockStatus" runat="server" style="z-index: 1; left: 221px; top: 332px; position: absolute; width: 123px;" Text="  " Font-Bold="True" />
         <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 150px; top: 561px; position: absolute; width: 60px; height: 26px;" Text="OK" BackColor="#99CCFF" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" />
-        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 237px; top: 559px; position: absolute; height: 28px;" Text="Cancel" BackColor="#99CCFF" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" />
+        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 237px; top: 559px; position: absolute; height: 28px;" Text="Cancel" BackColor="#99CCFF" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" OnClick="btnCancel_Click" />
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 29px; top: 447px; position: absolute" Text="lblError" Font-Bold="True"></asp:Label>
         <asp:Label ID="lblDescription" runat="server" Font-Bold="True" style="z-index: 1; left: 117px; top: 193px; position: absolute; height: 19px" Text="Description : "></asp:Label>
         <asp:TextBox ID="txtDescription" runat="server" BackColor="#B9DCFF" style="z-index: 1; left: 221px; top: 198px; position: absolute; height: 42px; width: 214px"></asp:TextBox>
