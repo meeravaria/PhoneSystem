@@ -6,8 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PhoneClasses;
 
-
-
 public partial class AStaff : System.Web.UI.Page
 {
     //variable to store the primary key with the page level scope
@@ -81,7 +79,7 @@ public partial class AStaff : System.Web.UI.Page
         }
        
         //all done so redirect back to main page
-        Response.Redirect("Default.aspx");
+        Response.Redirect("DefaultStaff.aspx");
     }
 
         //function for adding new records
@@ -107,7 +105,7 @@ public partial class AStaff : System.Web.UI.Page
             //add the record 
             StaffSystem.Add();
             //all done so redirect back to the main page
-            Response.Redirect("Default.aspx");
+            Response.Redirect("DefaultStaff.aspx");
         }
         else
         {
@@ -142,7 +140,7 @@ public partial class AStaff : System.Web.UI.Page
             //update the record
             StaffSystem.Update();
             //all done so redirect back to the main page
-            Response.Redirect("Default.aspx");
+            Response.Redirect("DefaultStaff.aspx");
         }
         else
         {

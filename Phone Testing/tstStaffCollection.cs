@@ -87,12 +87,12 @@ namespace Phone_Testing
             //set it's properties
             TestItem.Active = true;
             TestItem.StaffID = 1;
-            TestItem.County = "Leicestershire";
-            TestItem.Street = "Hamilton Road";
-            TestItem.PostCode = "LE5 5TH";
-            TestItem.DateOfBirth = "13/08/1991";
-            TestItem.FirstName = "Maya";
-            TestItem.LastName = "Smith";
+            TestItem.County = "Buckinghamshire";
+            TestItem.Street = "Gosling Street";
+            TestItem.PostCode = "LE3 0GH";
+            TestItem.DateOfBirth = "25/12/1996";
+            TestItem.FirstName = "Meera";
+            TestItem.LastName = "Varia";
             TestItem.Gender = true;
             TestItem.Telephone = 0123456789;
             //set ThisStaff to the test data
@@ -119,12 +119,12 @@ namespace Phone_Testing
             //set it's properties
             TestItem.Active = true;
             TestItem.StaffID = 1;
-            TestItem.County = "Leicestershire";
-            TestItem.Street = "Hamilton Road";
-            TestItem.PostCode = "LE5 5TH";
-            TestItem.DateOfBirth = "13/08/1991";
-            TestItem.FirstName = "Maya";
-            TestItem.LastName = "Smith";
+            TestItem.County = "Buckinghamshire";
+            TestItem.Street = "Gosling Street";
+            TestItem.PostCode = "LE3 0GH";
+            TestItem.DateOfBirth = "25/12/1996";
+            TestItem.FirstName = "Meera";
+            TestItem.LastName = "Varia";
             TestItem.Gender = true;
             TestItem.Telephone = 0123456789;
             //set ThisStaff to the test data
@@ -155,12 +155,12 @@ namespace Phone_Testing
             //set it's properties
             TestItem.Active = true;
             TestItem.StaffID = 1;
-            TestItem.County = "Leicestershire";
-            TestItem.Street = "Hamilton Road";
-            TestItem.PostCode = "LE5 5TH";
-            TestItem.DateOfBirth = "13/08/1991";
-            TestItem.FirstName = "Maya";
-            TestItem.LastName = "Smith";
+            TestItem.County = "Buckinghamshire";
+            TestItem.Street = "Gosling Street";
+            TestItem.PostCode = "LE3 0GH";
+            TestItem.DateOfBirth = "25/12/1996";
+            TestItem.FirstName = "Meera";
+            TestItem.LastName = "Varia";
             TestItem.Gender = true;
             TestItem.Telephone = 0123456789;
             //set ThisStaff to the test data
@@ -226,19 +226,19 @@ namespace Phone_Testing
             clsStaffCollection FilteredStaff = new clsStaffCollection();
             //var to store outcome
             Boolean OK = true;
-            //apply a post code that doesn't exists
-            FilteredStaff.ReportByPostCode("HP219JR");
+            //apply a post code that does exists
+            FilteredStaff.ReportByPostCode("SW39DE");
             //check that the correct numbe of records are found
             if (FilteredStaff.Count == 2)
             {
                 //check that the first record is ID 5
-                if (FilteredStaff.StaffList[0].StaffID != 1)
+                if (FilteredStaff.StaffList[0].StaffID != 30)
                 {
                     OK = false;
                 }
 
                 //check the first record is ID 37
-                if (FilteredStaff.StaffList[1].StaffID != 3)
+                if (FilteredStaff.StaffList[1].StaffID != 31)
                 {
                     OK = false;
                 }
@@ -250,8 +250,21 @@ namespace Phone_Testing
 
             //test to see that there are no records
             Assert.IsTrue(OK);
+        }
 
-
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 StaffID = 55;
+            //invoke the method 
+            Found = AStaff.Find(StaffID);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
         }
 
 
