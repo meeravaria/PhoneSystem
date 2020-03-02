@@ -307,7 +307,7 @@ namespace Phone_Testing
             if (FilteredStaff.Count == 2)
             {
                 //check that the first record is ID 5
-                if (FilteredStaff.StaffList[0].StaffID ! = 5)
+                if (FilteredStaff.StaffList[0].StaffID != 5)
                 {
                     OK = false;
                 }
@@ -320,7 +320,7 @@ namespace Phone_Testing
             }
             else
             {
-                OK = false
+                OK = false;
             }
 
             //test to see that there are no records
