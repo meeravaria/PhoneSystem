@@ -18,8 +18,6 @@ namespace Phone_Testing
         }
 
 
-
-
         [TestMethod]
         public void StaffListOK()
         {
@@ -36,8 +34,8 @@ namespace Phone_Testing
             TestItem.County = "Buckinghamshire";
             TestItem.StaffID = 1;
             TestItem.DateOfBirth = "25/12/1996";
-            TestItem.FirstName = "Meera";
-            TestItem.LastName = "Varia";
+            TestItem.FirstName = "Sarah";
+            TestItem.LastName = "Smith";
             TestItem.Gender = true;
             TestItem.PostCode = "LE3 OGH";
             TestItem.Street = "Gosling Street";
@@ -76,9 +74,9 @@ namespace Phone_Testing
             Assert.AreEqual(AllStaff.ThisStaff, TestStaff);
 
         }
-
+        
     }
-
 }
+
 
 
