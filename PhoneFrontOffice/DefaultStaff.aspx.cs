@@ -95,14 +95,14 @@ public partial class DefaultStaff : System.Web.UI.Page
     {
 
     }
-    
-     
-    
-    //protected void lstStaff_SelectedIndexChanged1(object sender, EventArgs e)
-    
-    //{
-      
-    //}
+
+
+
+    protected void lstStaff_SelectedIndexChanged1(object sender, EventArgs e)
+
+    {
+
+    }
 
     //protected void btnApply_Click(object sender, EventArgs e)
     //{
@@ -116,18 +116,23 @@ public partial class DefaultStaff : System.Web.UI.Page
 
     //protected void btnAdd_Click1(object sender, EventArgs e)
     //{
-      
+
     //}
 
     //protected void btnDelete_Click(object sender, EventArgs e)
     //{
-       
+
     //}
 
     //protected void btnEdit_Click(object sender, EventArgs e)
     //{
-        
+
     //}
+
+    protected void lstStaff_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }
 
    
