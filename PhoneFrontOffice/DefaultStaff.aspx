@@ -10,6 +10,8 @@
     <form id="form1" runat="server">
         <div>
         </div>
+
+
         <asp:ListBox ID="lstStaff" runat="server" OnSelectedIndexChanged="lstStaff_SelectedIndexChanged" style="z-index: 1; left: 10px; top: 34px; position: absolute; height: 287px; width: 317px"></asp:ListBox>
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 30px; top: 337px; position: absolute" Text="lblError"></asp:Label>
         <asp:Label ID="lblPleaseEnter" runat="server" style="z-index: 1; left: 31px; top: 369px; position: absolute; width: 156px" Text="Please enter ..."></asp:Label>
@@ -19,6 +21,7 @@
         <asp:Button ID="btnAdd" runat="server" style="z-index: 1; left: 34px; top: 468px; position: absolute; height: 26px;" Text="Add" OnClick="btnAdd_Click" />
         <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 89px; top: 467px; position: absolute" Text="Edit" OnClick="btnEdit_Click1" />
         <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 146px; top: 468px; position: absolute" Text="Delete" OnClick="btnDelete_Click1" />
+        <asp:ListBox ID="lstStaff" runat="server" Height="257px" Width="285px"></asp:ListBox>
     </form>
 </body>
 </html>

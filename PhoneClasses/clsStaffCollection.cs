@@ -122,9 +122,7 @@ namespace PhoneClasses
          
 
             }
-        
-
-
+ 
     void PopulateArray(clsDataConnection DB)
     {
         //populates the array list based on the data table in the parameter DB
@@ -160,7 +158,6 @@ namespace PhoneClasses
 
     }
 
-    
     public void ReportByPostCode (string PostCode)
         {
             //filter the records based on a full or partial postcode

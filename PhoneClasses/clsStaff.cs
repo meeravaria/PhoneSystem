@@ -152,6 +152,7 @@ namespace PhoneClasses
             }
         }
 
+       
 
         public int Telephone
         {
@@ -199,12 +200,104 @@ namespace PhoneClasses
             }
         }
 
-
-        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6)
+            public string Valid(string text1, string text2, string text3, string text4, string text5, string text6)
+            {
+            
+            return "";
+            }
+        public string Valid(string County, string Street, string PostCode, string DateOfBirth, string FirstName, string LastName, bool Gender, int Telephone)
         {
+            //create a string variable to store the error
             string Error = "";
-            return Error;
+            //if the county is blank
+            if (County.Length == 3)
+            {
+                //record the error
+                Error = Error + "The county must be more than 3 characters";
+            }
+
+            //if the county is greater than 16 characters
+            if (County.Length > 15)
+            {
+                //record the error 
+                Error = Error + "The county must be less than 15 characters : ";
+            }
+
+            //if the dateofbirth is blank
+            if (DateOfBirth.Length == 4)
+            {
+                //record an error 
+                Error = Error + "The date of birth must be more than 4 characters";
+            }
+            //if date of birth is greater than 10
+            if (DateOfBirth.Length> 10)
+            {
+                //record the error 
+                Error = Error + "The date of birth must be less than 10 characters";
+            }
+            // if the first name is blank
+            if (FirstName.Length == 1)
+            {
+                //record the error
+                Error = Error + "The first name must be more than 1 character ";
+            }
+            //if the first name is greater than 25 characters 
+            if (FirstName.Length >25)
+            {
+                //record the error
+                Error = Error + "The first name must be less than 25 characters";
+
+            }
+            //if last name is blank 
+            if (LastName.Length == 1)
+            {
+                Error = Error + "The last name must be more than 1 character";
+            }
+            //if the last name is greater than 25 characters
+            if (LastName.Length >25)
+            {
+                //record the error
+                Error = Error + "The last name must be less than 25 characters";
+            }
+            //if the postcode is blank 
+            if (PostCode.Length ==1)
+            {
+                //record the error
+                Error = Error + "The postcode must be more than 1 character";           
+            }
+            //if the postcode is greater than 7 characters
+            if (PostCode.Length >7)
+            {
+                //record the error
+                Error = Error + "The postcode must less than 7 characters";
+            }
+            // if street is blank
+            if (Street.Length == 3)
+            {
+                //record the error
+                Error = Error + "The street must be more than 3 characters";
+            }
+            //if the street is greater than 50 characters
+            if (Street.Length >50)
+            {
+                //record the error
+                Error = Error + "The street must be less than 50 characters";
+            }
+            ////if telephone is blank 
+            //if (Telephone == 0)
+            //{
+            //    //record the error 
+            //    Error = Error + "The telephone must not be left blank";
+            //}
+            ////if telephone is greater than 10 characters
+            //if (Telephone > 10)
+            //{
+            //    Error = Error + "The telephone must be less than 10 characters";
+            //}
+            //return an error messages
+           return Error;
         }
+        
     }
 
 
