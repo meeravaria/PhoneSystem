@@ -50,7 +50,10 @@ namespace PhoneClasses
             }
         }
 
-       
+        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, bool checked1, bool checked2)
+        {
+            throw new NotImplementedException();
+        }
 
         public int PhoneID
         {
@@ -211,7 +214,7 @@ namespace PhoneClasses
 
     
 
-        public string Valid(int capacity, decimal price, string Colour, string dateAdded, string description, string make, string model, bool stockStatus)
+        public string Valid(int capacity, decimal Price, string Colour, string dateAdded, string Description, string Make, string Model, bool stockStatus)
         {
             //create a string variable to store the error 
             String Error = "";
@@ -231,25 +234,90 @@ namespace PhoneClasses
                 Error = Error + "Colour must between 1 to 50 characters." + " ";
            }
 
-            //copy the dateAdded value to the DateTemp variable
-            DateTemp = Convert.ToDateTime(dateAdded);
-            if(DateTemp < DateTime.Now.Date)
+            try
+            {
+                 //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(dateAdded);
+                if(DateTemp < DateTime.Now.Date)
+                {
+                    //record the error 
+                    Error = Error + "The date cannot be in the past." + " "; 
+                }
+
+               
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future. " + " ";
+                }
+
+            }
+
+           catch
             {
                 //record the error 
-                Error = Error + "The date cannot be in the past." + " "; 
+                Error = Error + "The date was not a valid date : "; 
             }
 
-
-            //check to see if the date is greater than today's date
-            if (DateTemp > DateTime.Now.Date)
+            //if Description is blank
+            if (Description.Length == 0)
             {
                 //record the error
-                Error = Error + "The date cannot be in the future. " + " ";
+                Error = Error + " The description may not be blank." + " ";
+            }
+
+            if (Description.Length < 1 | Description.Length > 500)
+            {
+                //set the error message 
+                Error = Error + "The description must between 1 to 500 characters." + " ";
             }
 
 
+            //if Make is blank
+            if (Make.Length == 0)
+            {
+                //record the error
+                Error = Error + " The make may not be blank." + " ";
+            }
 
+            if (Make.Length < 1 | Make.Length > 50)
+            {
+                //set the error message 
+                Error = Error + "The make must between 1 to 50 characters." + " ";
+            }
 
+            //if Make is blank
+            if (Model.Length == 0)
+            {
+                //record the error
+                Error = Error + " The model may not be blank." + " ";
+            }
+
+            if (Model.Length < 1 | Model.Length > 10)
+            {
+                //set the error message 
+                Error = Error + "The model must between 1 to 50 characters." + " ";
+            }
+
+            if (Price < 0.00m | Price > 999.99m)
+            {
+                //set the error message 
+                Error = Error + "The price must between £0.00 to £999.99." + " ";
+            }
+            
+            ////if Capacity is blank
+            //if (Capacity == 0)
+            //{
+            //    //record the error
+            //    Error = Error + " The capacity may not be blank." + " ";
+            //}
+
+            //if (Capacity < 0 | Capacity > 100)
+            //{
+            //    //set the error message 
+            //    Error = Error + "The capacity must between 1 to 3 characters" + " ";
+            //}
 
             //return any error messages
             return Error;
