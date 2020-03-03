@@ -50,6 +50,8 @@ namespace PhoneClasses
             }
         }
 
+       
+
         public int PhoneID
         {
             get
@@ -207,14 +209,52 @@ namespace PhoneClasses
                  
         }
 
-        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, bool checked1, bool checked2)
-        {
+    
 
-            string Error = "";
+        public string Valid(int capacity, decimal price, string Colour, string dateAdded, string description, string make, string model, bool stockStatus)
+        {
+            //create a string variable to store the error 
+            String Error = "";
+            //create a temporary variable to store data values
+            DateTime DateTemp; 
+
+            //if Colour is blank
+            if (Colour.Length == 0)
+            {
+                //record the error
+                Error = Error + " The colour may not be blank." + " ";
+            }
+
+           if (Colour.Length < 1 | Colour.Length > 50)
+           {
+                //set the error message 
+                Error = Error + "Colour must between 1 to 50 characters." + " ";
+           }
+
+            //copy the dateAdded value to the DateTemp variable
+            DateTemp = Convert.ToDateTime(dateAdded);
+            if(DateTemp < DateTime.Now.Date)
+            {
+                //record the error 
+                Error = Error + "The date cannot be in the past." + " "; 
+            }
+
+
+            //check to see if the date is greater than today's date
+            if (DateTemp > DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be in the future. " + " ";
+            }
+
+
+
+
+
+            //return any error messages
             return Error;
         }
 
         
-
     }
 }

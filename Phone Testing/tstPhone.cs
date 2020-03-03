@@ -8,6 +8,19 @@ namespace Phone_Testing
     [TestClass]
     public class tstPhone
     {
+        //good test data
+        //create some test data to pass to the method 
+
+   
+        Int32 Capacity = 16;
+        Decimal Price = 100.00m;
+        String Colour = "Blue";
+        String DateAdded = DateTime.Now.Date.ToString();
+        String Description = "Old Phone";
+        String Make = "Nokia";
+        String Model = "550";
+        bool StockStatus = false;
+
         [TestMethod]
         public void InstanceOK()
         //Instance 
@@ -177,6 +190,283 @@ namespace Phone_Testing
             Assert.IsTrue(Found);
 
         }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreEqual(Error, "");
+
+        }
+
+
+        [TestMethod]
+        public void ColourMinLessOne()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = ""; //this should fail
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourMin()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = "a"; //this should  be ok
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreEqual(Error, "");
+
+        }
+
+
+        [TestMethod]
+        public void ColourMinPlusOne()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = "aa"; //this should  be ok
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourMaxLessOne()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should  be ok
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourMax()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should  be ok
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreEqual(Error, "");
+
+        }
+
+
+        [TestMethod]
+        public void ColourMaxPlusOne()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should fail
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourExtremeMax()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = ""; //this should fail
+            Colour = Colour.PadRight(100, 'a');
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void DateAddedExtremeMim()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            DateTime TestDate;
+            //set the data to todays date 
+            TestDate = DateTime.Now.Date;
+            //change the data to whatever the date is less 100 years 
+            TestDate = TestDate.AddYears(-100);
+            //convert the date variable to a string variable 
+            string DateAdded = TestDate.ToString(); 
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+
+        [TestMethod]
+        public void DateAddedMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less 1 day
+            TestDate = TestDate.AddDays(-1);
+            //convert the date variable to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void DateAddedMin()
+        {
+            //create an instance of the class we want to create
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //convert the date variable to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void DateAddedMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 1 day
+            TestDate = TestDate.AddDays(1);
+            //convert the date variable to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void DateAddedExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 100 years
+            TestDate = TestDate.AddYears(100);
+            //convert the date variable to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+
+
+
+
+
+
+
+        [TestMethod]
+        public void ColourMid()
+
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message 
+            String Error = "";
+            //create some test data to pass to the method 
+            string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaa"; //this should  be ok
+            //invoke the method 
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct 
+            Assert.AreEqual(Error, "");
+
+        }
+
+
+
+
+
+
 
 
         [TestMethod]
