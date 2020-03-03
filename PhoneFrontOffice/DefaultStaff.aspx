@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:ListBox ID="lstStaff" runat="server" OnSelectedIndexChanged="lstStaff_SelectedIndexChanged1" style="z-index: 1; left: 10px; top: 34px; position: absolute; height: 287px; width: 317px"></asp:ListBox>
+        <asp:ListBox ID="lstStaff" runat="server" OnSelectedIndexChanged="lstStaff_SelectedIndexChanged" style="z-index: 1; left: 10px; top: 34px; position: absolute; height: 287px; width: 317px"></asp:ListBox>
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 30px; top: 337px; position: absolute" Text="lblError"></asp:Label>
         <asp:Label ID="lblPleaseEnter" runat="server" style="z-index: 1; left: 31px; top: 369px; position: absolute; width: 156px" Text="Please enter ..."></asp:Label>
         <asp:TextBox ID="txtStaffSearch" runat="server" style="z-index: 1; left: 33px; top: 392px; position: absolute; width: 220px"></asp:TextBox>

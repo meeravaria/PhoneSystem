@@ -33,7 +33,7 @@ public partial class APhone : System.Web.UI.Page
         //create an instance of the phone book
         PhoneClasses.clsPhoneCollection PhoneBook = new PhoneClasses.clsPhoneCollection();
         //validate the data on the web form 
-        String Error = PhoneBook.ThisPhone.Valid(txtCapacity.Text,txtPrice.Text, txtColour.Text, txtDateAdded.Text, txtDescription.Text, txtMake.Text, txtModel.Text, chkStockStatus.Checked, chkActive.Checked ); 
+        String Error = PhoneBook.ThisPhone.Valid(txtCapacity.Text,txtPrice.Text, txtColour.Text, txtDateAdded.Text, txtDescription.Text, txtMake.Text, txtModel.Text, chkStockStatus.Checked, chkActive.Checked); 
         //if the data is OK then add it to the object
         if (Error == "")
         {
