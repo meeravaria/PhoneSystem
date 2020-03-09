@@ -214,7 +214,7 @@ namespace PhoneClasses
 
     
 
-        public string Valid(int capacity, decimal Price, string Colour, string dateAdded, string Description, string Make, string Model, bool stockStatus)
+        public string Valid(string capacity, string Price, string Colour, string dateAdded, string Description, string Make, string Model, string stockStatus)
         {
             //create a string variable to store the error 
             String Error = "";
@@ -300,24 +300,49 @@ namespace PhoneClasses
                 Error = Error + "The model must between 1 to 50 characters." + " ";
             }
 
-            if (Price < 0.00m | Price > 999.99m)
+            try
             {
-                //set the error message 
-                Error = Error + "The price must between £0.00 to £999.99." + " ";
-            }
-            
-            ////if Capacity is blank
-            //if (Capacity == 0)
-            //{
-            //    //record the error
-            //    Error = Error + " The capacity may not be blank." + " ";
-            //}
 
-            //if (Capacity < 0 | Capacity > 100)
-            //{
-            //    //set the error message 
-            //    Error = Error + "The capacity must between 1 to 3 characters" + " ";
-            //}
+                decimal PriceTemp =Convert.ToDecimal( Price);
+                if (PriceTemp < 0.00m | PriceTemp > 999.99m)
+                {
+                    //set the error message 
+                    Error = Error + "The price must between £0.00 to £999.99." + " ";
+                }
+
+            }
+
+            catch
+            {
+                //record the error 
+                Error = Error + "The price was not a valid price : ";
+            }
+
+
+            try
+            {
+                Int32 TempCapacity =Convert.ToInt32( capacity);
+                //if Capacity is blank
+                if (TempCapacity == 0)
+                {
+                    //record the error
+                    Error = Error + " The capacity may not be blank." + " ";
+                }
+
+                if (TempCapacity < 0 | TempCapacity > 999)
+                {
+                    //set the error message 
+                    Error = Error + "The capacity must between 1 to 3 characters" + " ";
+                }
+
+            }
+            catch
+            {
+                //record the error 
+                Error = Error + "The capacity was not a valid capacity : ";
+            }
+
+
 
             //return any error messages
             return Error;
