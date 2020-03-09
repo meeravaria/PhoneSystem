@@ -96,6 +96,16 @@ public partial class _Default : System.Web.UI.Page
         //redirect to the data entry page 
         Response.Redirect("APhone.aspx");
     }
+
+    protected void btnApply_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnDisplayAll_Click(object sender, EventArgs e)
+    {
+      
+    }
 }
 
 

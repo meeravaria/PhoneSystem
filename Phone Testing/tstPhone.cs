@@ -12,14 +12,14 @@ namespace Phone_Testing
         //create some test data to pass to the method 
 
 
-        Int32 Capacity = 16;
-        Decimal Price = 100.00m;
-        String Colour = "Blue";
-        String DateAdded = DateTime.Now.Date.ToString();
-        String Description = "Old Phone";
-        String Make = "Nokia";
-        String Model = "550";
-        bool StockStatus = false;
+        string Capacity = "16";
+        string Price = "100.00";
+        string Colour = "Blue";
+        string DateAdded = DateTime.Now.Date.ToString();
+        string Description = "Old Phone";
+        string Make = "Nokia";
+        string Model = "550";
+        string StockStatus = "false";
 
         [TestMethod]
         public void InstanceOK()
@@ -902,7 +902,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Boolean StockStatus = false;
+            string StockStatus = "false";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -919,7 +919,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Boolean StockStatus = true;
+            string StockStatus = "true";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -940,7 +940,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //this should pass
-            Decimal Price = 999.99m;
+            string Price = "999.99";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -956,7 +956,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //this should pass
-            Decimal Price = 0.00m;
+            string Price = "0.00";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -972,7 +972,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             // this should pass
-            Decimal Price = 500.00m;
+            string Price = "500.00";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             // test to see that the result is correct
@@ -988,7 +988,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Decimal Price = 500000.00m;
+            string Price = "500000.00";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1005,7 +1005,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Decimal Price = -100m;
+            string Price = "-100";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1022,7 +1022,7 @@ namespace Phone_Testing
             //string variable to store any error message 
             String Error = "";
             //create some test data to pass to the method 
-            Decimal Price = -0.01m; //this should fail
+            string Price = "-0.01"; //this should fail
             //invoke the method 
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct 
@@ -1039,7 +1039,7 @@ namespace Phone_Testing
             //string variable to store any error message 
             String Error = "";
             //create some test data to pass to the method 
-            Decimal Price = 1000.00m; //this should fail
+            string Price = "1000.00"; //this should fail
             //invoke the method 
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct 
@@ -1056,7 +1056,7 @@ namespace Phone_Testing
             //string variable to store any error message 
             String Error = "";
             //create some test data to pass to the method 
-            Decimal Price = 0.01m; //this should fail
+            string  Price = "0.01"; //this should fail
             //invoke the method 
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct 
@@ -1073,7 +1073,7 @@ namespace Phone_Testing
             //string variable to store any error message 
             String Error = "";
             //create some test data to pass to the method 
-            Decimal Price = 999.98m; //this should fail
+            string  Price = "999.98"; //this should fail
             //invoke the method 
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct 
@@ -1095,7 +1095,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Int32 Capacity = 1;
+            string Capacity = "1";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1113,7 +1113,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Int32 Capacity = 100;
+            string Capacity = "100";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1130,7 +1130,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Int32 Capacity = 10;
+            string Capacity = "10";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1147,7 +1147,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Int32 Capacity = 10;
+            string Capacity = "10";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1165,7 +1165,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            Int32 Capacity = 10;
+            string Capacity = "10";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
             //test to see that the result is correct
@@ -1174,74 +1174,75 @@ namespace Phone_Testing
         }
 
 
-        //[TestMethod]
-        //public void CapacityMinLessOne()
 
-        //{
-        //    //create an instance of the filtered data
-        //    clsPhone APhone = new clsPhone();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    Int32 Capacity = 0;
-        //    //invoke the method
-        //    Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
 
-        //}
+        [TestMethod]
+        public void CapacityMinLessOne()
 
-        //[TestMethod]
-        //public void CapacityMaxPlusOne()
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Capacity = "0";
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-        //{
-        //    //create an instance of the filtered data
-        //    clsPhone APhone = new clsPhone();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    Int32 Capacity = 1000;
-        //    //invoke the method
-        //    Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
+        [TestMethod]
+        public void CapacityMaxPlusOne()
 
-        //}
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Capacity = "1000";
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
 
-        //[TestMethod]
-        //public void CapacityExtremeMax()
+        }
 
-        //{
-        //    //create an instance of the filtered data
-        //    clsPhone APhone = new clsPhone();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    Int32 Capacity = 100000; //this should fail
-        //    //invoke the method
-        //    Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
+        [TestMethod]
+        public void CapacityExtremeMax()
 
-        //}
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Capacity = "1000000000"; //this should fail
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
 
-        //[TestMethod]
-        //public void CapacityExtremeMin()
+        }
 
-        //{
-        //    //create an instance of the filtered data
-        //    clsPhone APhone = new clsPhone();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    Int32 Capacity = -1000000000; //this should fail
-        //    //invoke the method
-        //    Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
+        [TestMethod]
+        public void CapacityExtremeMin()
 
-        //}
-        
+        {
+            //create an instance of the filtered data
+            clsPhone APhone = new clsPhone();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Capacity = "-1000000000"; //this should fail
+            //invoke the method
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
         [TestMethod]
         public void PhoneNoFound()
         //Phone No Found Method

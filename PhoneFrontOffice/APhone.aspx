@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblEnterPhoneDetails" runat="server" Font-Bold="False" Font-Italic="True" Text="Please enter the fields below : "></asp:Label>
         </div>
         <asp:Label ID="lblCapacity" runat="server" Font-Bold="True" style="z-index: 1; left: 138px; top: 62px; position: absolute; bottom: 780px" Text="Capacity : "></asp:Label>
         <asp:Label ID="lblPrice" runat="server" Font-Bold="True" style="z-index: 1; left: 162px; top: 94px; position: absolute; bottom: 751px;" Text="Price :"></asp:Label>
