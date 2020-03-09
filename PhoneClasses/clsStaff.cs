@@ -205,7 +205,8 @@ namespace PhoneClasses
             
             return "";
             }
-        public string Valid(string County, string Street, string PostCode, string DateOfBirth, string FirstName, string LastName, bool Gender, int Telephone)
+
+        public string Valid(string County, string Street, string PostCode, string DateOfBirth, string FirstName, string LastName, string Gender, string Telephone)
         {
             //create a string variable to store the error
             string Error = "";
@@ -283,19 +284,32 @@ namespace PhoneClasses
                 //record the error
                 Error = Error + "The street must be less than 50 characters";
             }
-            ////if telephone is blank 
-            //if (Telephone == 0)
-            //{
-            //    //record the error 
-            //    Error = Error + "The telephone must not be left blank";
-            //}
-            ////if telephone is greater than 10 characters
-            //if (Telephone > 10)
-            //{
-            //    Error = Error + "The telephone must be less than 10 characters";
-            //}
+
+            try
+
+            {
+                 if (Telephone < 11)
+                {
+                   //record the error 
+                   Error = Error + "The telephone must not be left blank";
+
+                }
+            }
+
+            catch
+            {
+
+
+            }
+            //if telephone is blank 
+           
+            //if telephone is greater than 10 characters
+            if (Telephone > 22)
+            {
+                Error = Error + "The telephone must be less than 22 numbers";
+            }
             //return an error messages
-           return Error;
+            return Error;
         }
         
     }
