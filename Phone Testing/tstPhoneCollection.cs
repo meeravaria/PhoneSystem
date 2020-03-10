@@ -231,13 +231,13 @@ namespace Phone_Testing
             if (FilteredPhones.Count == 2)
             {
                 //check that the first record id ID 36
-                if (FilteredPhones.PhoneList[0].PhoneID != 3)
+                if (FilteredPhones.PhoneList[0].PhoneID != 259)
                 {
                     OK = false;
                 }
 
                 //check that the first record is ID 37
-                if (FilteredPhones.PhoneList[1].PhoneID != 4)
+                if (FilteredPhones.PhoneList[1].PhoneID != 260)
                 {
                     OK = false;
                 }
