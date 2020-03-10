@@ -205,7 +205,7 @@ namespace PhoneClasses
 
             }
             else
-            {
+            { 
                 //return false indicating a problem 
                 return false; 
             }
@@ -213,6 +213,8 @@ namespace PhoneClasses
         }
 
     
+
+
 
         public string Valid(string capacity, string Price, string Colour, string dateAdded, string Description, string Make, string Model, string stockStatus)
         {
