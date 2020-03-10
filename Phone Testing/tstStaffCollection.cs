@@ -34,8 +34,8 @@ namespace Phone_Testing
             TestItem.County = "Buckinghamshire";
             TestItem.StaffID = 1;
             TestItem.DateOfBirth = "25/12/1996";
-            TestItem.FirstName = "Sarah";
-            TestItem.LastName = "Smith";
+            TestItem.FirstName = "Meera";
+            TestItem.LastName = "Varia";
             TestItem.Gender = true;
             TestItem.PostCode = "LE3 OGH";
             TestItem.Street = "Gosling Street";
@@ -173,11 +173,11 @@ namespace Phone_Testing
             TestItem.Active = true;
             TestItem.StaffID = 2;
             TestItem.County = "London";
-            TestItem.Street = "Love Street";
-            TestItem.PostCode = "HP18 RSC";
+            TestItem.Street = "Richmond Road";
+            TestItem.PostCode = "HA4 5JX";
             TestItem.DateOfBirth = "15/04/1992";
-            TestItem.FirstName = "Sarah";
-            TestItem.LastName = "Smith";
+            TestItem.FirstName = "Jane";
+            TestItem.LastName = "Doe";
             TestItem.Gender = true;
             //set the record based on the new test data
             AllStaff.ThisStaff = TestItem;

@@ -149,8 +149,6 @@ public partial class AStaff : System.Web.UI.Page
         }
         }
 
-
-
     protected void Active_CheckedChanged(object sender, EventArgs e)
         {
 
