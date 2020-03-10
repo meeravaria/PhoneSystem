@@ -285,29 +285,32 @@ namespace PhoneClasses
                 Error = Error + "The street must be less than 50 characters";
             }
 
-            try
+            //try
 
-            {
-                 if (Telephone < 11)
-                {
-                   //record the error 
-                   Error = Error + "The telephone must not be left blank";
+            //{
+            //    Int32 TempTelephone = Convert.ToInt32(Telephone);
+            //    //if telephone is blank
 
-                }
-            }
+            //    if (TempTelephone == 0)
+            //    {
+            //        //record the error 
+            //        Error = Error + "The telephone must not 0" + " ";
+            //    }
 
-            catch
-            {
+            //    if (TempTelephone < 11 | TempTelephone > 22)
+            //    {
+            //        Error = Error + "The telephone must be less than 22 numbers" + " ";
+            //    }
 
+            //    }
 
-            }
-            //if telephone is blank 
-           
-            //if telephone is greater than 10 characters
-            if (Telephone > 22)
-            {
-                Error = Error + "The telephone must be less than 22 numbers";
-            }
+            //    catch
+            //    {
+
+            //        //return an error messages
+            //        return Error + "The telephone is not valid" + " ";
+            //    }
+
             //return an error messages
             return Error;
         }

@@ -412,7 +412,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = "buc" ; //this should trigger an error - 3 characters
             //invoke the method
@@ -428,7 +428,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = "buck"; //this should be ok - 4 characters
             //invoke the method
@@ -444,7 +444,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = "bucks"; //this should be ok - 5 characters
             //invoke the method
@@ -460,7 +460,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = "buckinghamshir"; //this should be ok - 14 characters
             //invoke the method
@@ -476,7 +476,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = "buckinghamshire"; //this should be ok - 15 characters
             //invoke the method
@@ -494,7 +494,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = "bucking"; //this should be ok - 7 characters
             //invoke the method
@@ -510,7 +510,7 @@ namespace Phone_Testing
               //create an instance of the class we want to create
               clsStaff AStaff = new clsStaff();
               //string variable to store any error message
-              string Error = "";
+              String Error = "";
               //create some test data to pass to the method
               string County = "buckinghamshiree"; //this shouldn't be ok - 16 characters
               //invoke the method
@@ -526,7 +526,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string County = ""; //this shouldn't be ok - 16 characters
             County = County.PadRight(50, 'b'); //this should fail
@@ -543,7 +543,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/1"; //this shouldn't be ok - 4 characters
             //invoke the method
@@ -559,7 +559,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/12"; //this should be ok - 5 characters
             //invoke the method
@@ -575,7 +575,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/12/"; //this should be ok - 6 characters
             //invoke the method
@@ -591,7 +591,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/12/199"; //this shouldn't be ok - 9 characters
             //invoke the method
@@ -607,7 +607,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/12/1996"; //this should be ok - 10 characters
             //invoke the method
@@ -623,7 +623,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/12/19966"; //this should be ok - 11 characters
             //invoke the method
@@ -639,7 +639,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = "25/12/1996"; //this should be ok - 5 characters
             //invoke the method
@@ -655,7 +655,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string DateOfBirth = ""; //this shouldn't be ok - 16 characters
             DateOfBirth = DateOfBirth.PadRight(20, '2'); //this should fail
@@ -672,7 +672,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "M"; //this should trigger an error - 1 characters
             //invoke the method
@@ -688,7 +688,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "Me"; //this should be ok - 2 characters
             //invoke the method
@@ -704,7 +704,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "Mee"; //this should be ok - 3 characters
             //invoke the method
@@ -720,7 +720,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "Meeraaaaaaaaaaaaaaaaaaaa"; //this should be ok - 24 characters
             //invoke the method
@@ -736,7 +736,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "Meeraaaaaaaaaaaaaaaaaaaaa"; //this should be ok - 25 characters
             //invoke the method
@@ -752,7 +752,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "Meeraaaaaaaaaaaaaaaaaaaaaa"; //this should be ok - 26 characters
             //invoke the method
@@ -768,7 +768,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = "Meeraaaaaaaa"; //this should be ok - 12 characters
             //invoke the method
@@ -784,7 +784,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string FirstName = ""; //this shouldn't be ok - 50 characters
             FirstName = FirstName.PadRight(50, 'm'); //this should fail
@@ -801,7 +801,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "V"; //this should trigger an error - 1 characters
             //invoke the method
@@ -817,7 +817,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "Va"; //this should be ok - 2 characters
             //invoke the method
@@ -833,7 +833,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "Var"; //this should be ok - 3 characters
             //invoke the method
@@ -849,7 +849,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "Variaaaaaaaaaaaaaaaaaaaa"; //this should be ok - 24 characters
             //invoke the method
@@ -865,7 +865,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "Variaaaaaaaaaaaaaaaaaaaaa"; //this should be ok - 25 characters
             //invoke the method
@@ -881,7 +881,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "Variaaaaaaaaaaaaaaaaaaaaaa"; //this shouldn't be ok - 26 characters
             //invoke the method
@@ -897,7 +897,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = "Variaaaaaaaa"; //this should be ok - 12 characters
             //invoke the method
@@ -913,7 +913,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string LastName = ""; //this shouldn't be ok - 50 characters
             LastName = LastName.PadRight(50, 'v'); //this should fail
@@ -930,7 +930,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "L"; //this should trigger an error - 1 characters
             //invoke the method
@@ -946,7 +946,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "LE"; //this should be ok - 2 characters
             //invoke the method
@@ -962,7 +962,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "LE3"; //this shouldn't be ok - 3 characters
             //invoke the method
@@ -978,7 +978,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "LE3 0GH"; //this should be ok - 6 characters
             //invoke the method
@@ -994,7 +994,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "SW179DE"; //this should be ok - 7 characters
             //invoke the method
@@ -1010,7 +1010,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "LE30GHED"; //this shouldn't be ok - 8 characters
             //invoke the method
@@ -1026,7 +1026,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = "LE3"; //this shouldn't be ok - 3 characters
             //invoke the method
@@ -1042,7 +1042,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string PostCode = ""; //this shouldn't be ok - 50 characters
             PostCode = PostCode.PadRight(10, 'h'); //this should fail
@@ -1059,7 +1059,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = "Lov"; //this should trigger an error - 3 characters
             //invoke the method
@@ -1075,7 +1075,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = "Gosl"; //this should be ok - 4 characters
             //invoke the method
@@ -1091,7 +1091,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = "Gosli"; //this should be ok - 5 characters
             //invoke the method
@@ -1107,7 +1107,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = "Goslingggggggggggggggggggggggggggggggggggg street"; //this should be ok - 49 characters
             //invoke the method
@@ -1123,7 +1123,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = "Goslinggggggggggggggggggggggggggggggggggggg Street"; //this should be ok - 50 characters
             //invoke the method
@@ -1139,9 +1139,9 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
-            string PostCode = "Goslingggggggggggggggggggggggggggggggggggggg Street"; //this shouldn't be ok - 51 characters
+            string Street = "Goslingggggggggggggggggggggggggggggggggggggg Street"; //this shouldn't be ok - 51 characters
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1155,7 +1155,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = "Goslingggggggggggg Street"; //this shouldn't be ok - 25 characters
             //invoke the method
@@ -1171,7 +1171,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Street = ""; //this shouldn't be ok - 50 characters
             Street = Street.PadRight(100, 'g'); //this should fail
@@ -1188,7 +1188,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Gender = "false"; 
             //invoke the method
@@ -1204,7 +1204,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Gender = "true";
             //invoke the method
@@ -1221,7 +1221,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Telephone = "1"; //this should trigger an error - 1 number
             //invoke the method
@@ -1238,9 +1238,9 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
-            string Telephone = "01234567890"; //this should trigger an error - 1 number
+            string Telephone = "11"; //this shouldn't trigger an error - 11 number
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1254,7 +1254,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Telephone = "12"; //this should trigger an error - 12 numbers
             //invoke the method
@@ -1270,7 +1270,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Telephone = "10"; //this should trigger an error - 10 number
             //invoke the method
@@ -1286,13 +1286,13 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
-            string Telephone = "11"; //this should trigger an error - 12 numbers
+            string Telephone = "11"; //this should trigger an error - 11 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
-            Assert.AreNotEqual(Error, "");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -1302,7 +1302,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Telephone = "12"; //this should trigger an error - 12 numbers
             //invoke the method
@@ -1318,13 +1318,13 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Telephone = "6"; //this should trigger an error - 6 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
-            Assert.AreNotEqual(Error, "");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -1334,7 +1334,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //string variable to store any error message
-            string Error = "";
+            String Error = "";
             //create some test data to pass to the method
             string Telephone = "22"; //this should trigger an error - 22 characters
             //invoke the method
