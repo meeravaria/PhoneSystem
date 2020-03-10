@@ -105,9 +105,49 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnDisplayAll_Click(object sender, EventArgs e)
     {
-       
+        //display all phones
+        DisplayPhone();
     }
-    
+
+    Int32 DisplayPhone()
+    {
+        Int32 PhoneID; //Var to store the primary key 
+        Int32 Capacity; //Var to store the Capacity 
+        Decimal Price; //Var to store the Price 
+        String Colour; //Var to store the Colour 
+        DateTime DateAdded; // Var to store the DateAdded 
+        String Description; //Var to store the Description 
+        String Make; //Var to store the Make
+        String Model; //Var to store the Model 
+        Boolean Active; //Var to store the Active 
+        Boolean StockStatus; //Var to store the StockStatus 
+        ;//Create an instance of the address book class 
+        clsPhoneCollection Phone = new clsPhoneCollection();
+        Int32 RecordCount; //Var to store the count of records 
+        Int32 Index = 0; //Var to store the index for the loop
+        RecordCount = Phone.Count; //get the count of records 
+        while (Index < RecordCount) //While there are records to process
+        {
+            PhoneID = Phone.PhoneList[Index].PhoneID; //get primary key 
+            Capacity = Phone.PhoneList[Index].Capacity; //get Capacity
+            Price = Phone.PhoneList[Index].Price; //get Price
+            Colour = Phone.PhoneList[Index].Colour; //get Colour
+            DateAdded = Phone.PhoneList[Index].DateAdded; //get DateAdded
+            Description = Phone.PhoneList[Index].Description; //get Description
+            Make = Phone.PhoneList[Index].Make; //get Make
+            Model = Phone.PhoneList[Index].Model; //get Model
+            Active = Phone.PhoneList[Index].Active; //get Active
+            StockStatus = Phone.PhoneList[Index].StockStatus; //get StockStatus
+            //create a new entry for the list box
+            ListItem NewEntry = new ListItem(PhoneID.ToString() + " : " + Make + " ");
+            lstPhones.Items.Add(NewEntry);
+            Index++;
+        }
+        return RecordCount; //return the count of records found
+
+    }
+
+   
 }
 
 
