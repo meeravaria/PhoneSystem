@@ -205,7 +205,7 @@ namespace PhoneClasses
 
             }
             else
-            {
+            { 
                 //return false indicating a problem 
                 return false; 
             }
@@ -213,6 +213,8 @@ namespace PhoneClasses
         }
 
     
+
+
 
         public string Valid(string capacity, string Price, string Colour, string dateAdded, string Description, string Make, string Model, string stockStatus)
         {
@@ -257,7 +259,7 @@ namespace PhoneClasses
            catch
             {
                 //record the error 
-                Error = Error + "The date was not a valid date : "; 
+                Error = Error + "The data was not a valid date : "; 
             }
 
             //if Description is blank
@@ -315,7 +317,7 @@ namespace PhoneClasses
             catch
             {
                 //record the error 
-                Error = Error + "The price was not a valid price : ";
+                Error = Error + "The data was not a valid price : ";
             }
 
 
@@ -339,7 +341,7 @@ namespace PhoneClasses
             catch
             {
                 //record the error 
-                Error = Error + "The capacity was not a valid capacity : ";
+                Error = Error + "The data was not a valid capacity : ";
             }
 
 
