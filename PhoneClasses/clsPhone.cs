@@ -52,7 +52,7 @@ namespace PhoneClasses
 
         public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, bool checked1, bool checked2)
         {
-            throw new NotImplementedException();
+            return "";
         }
 
         public int PhoneID
