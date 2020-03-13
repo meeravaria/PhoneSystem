@@ -126,6 +126,7 @@ public partial class _Default : System.Web.UI.Page
         Int32 RecordCount; //Var to store the count of records 
         Int32 Index = 0; //Var to store the index for the loop
         RecordCount = Phone.Count; //get the count of records 
+        lstPhones.Items.Clear();
         while (Index < RecordCount) //While there are records to process
         {
             PhoneID = Phone.PhoneList[Index].PhoneID; //get primary key 
@@ -139,7 +140,7 @@ public partial class _Default : System.Web.UI.Page
             Active = Phone.PhoneList[Index].Active; //get Active
             StockStatus = Phone.PhoneList[Index].StockStatus; //get StockStatus
             //create a new entry for the list box
-            ListItem NewEntry = new ListItem(PhoneID.ToString() + " : " + Make + " ");
+            ListItem NewEntry = new ListItem(PhoneID.ToString() + " - " + Make + " ");
             lstPhones.Items.Add(NewEntry);
             Index++;
         }
