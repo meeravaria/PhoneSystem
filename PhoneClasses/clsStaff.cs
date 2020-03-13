@@ -19,7 +19,7 @@ namespace PhoneClasses
 
         private string mLastName;
 
-        private bool mGender;
+        private string mGender;
 
         private int mTelephone;
 
@@ -138,7 +138,7 @@ namespace PhoneClasses
             }
         }
 
-        public bool Gender
+        public string Gender
         {
             get
             {
@@ -152,7 +152,7 @@ namespace PhoneClasses
             }
         }
 
-       
+        
 
         public int Telephone
         {
@@ -187,7 +187,7 @@ namespace PhoneClasses
                 mDateOfBirth = Convert.ToString(DB.DataTable.Rows[0]["DateOfBirth"]);
                 mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
                 mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
-                mGender = Convert.ToBoolean(DB.DataTable.Rows[0]["Gender"]);
+                mGender = Convert.ToString(DB.DataTable.Rows[0]["Gender"]);
                 mTelephone = Convert.ToInt32(DB.DataTable.Rows[0]["Telephone"]);
                 //always return true
                 return true;
@@ -199,14 +199,7 @@ namespace PhoneClasses
                 return false;
             }
         }
-
-            public string Valid(string text1, string text2, string text3, string text4, string text5, string text6)
-            {
-            
-            return "";
-            }
-
-        public string Valid(string County, string Street, string PostCode, string DateOfBirth, string FirstName, string LastName, string Gender, string Telephone)
+            public string Valid(string County, string Street, string PostCode, string DateOfBirth, string FirstName, string LastName, string Gender, string Telephone)
         {
             //create a string variable to store the error
             string Error = "";
@@ -279,37 +272,38 @@ namespace PhoneClasses
                 Error = Error + "The street must be more than 3 characters";
             }
             //if the street is greater than 50 characters
-            if (Street.Length >50)
+            if (Street.Length > 50)
             {
                 //record the error
                 Error = Error + "The street must be less than 50 characters";
             }
 
-            //try
+           
+            if (Telephone.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The telephone must not 0";
+            }
 
-            //{
-            //    Int32 TempTelephone = Convert.ToInt32(Telephone);
-            //    //if telephone is blank
+            if (Telephone.Length != 10 )
+            {
+                //record the error 
+                Error = Error + "The telephone must less than 10";
+            }
 
-            //    if (TempTelephone == 0)
-            //    {
-            //        //record the error 
-            //        Error = Error + "The telephone must not 0" + " ";
-            //    }
+            if (Gender.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The gender must not be blank";
+            }
 
-            //    if (TempTelephone < 11 | TempTelephone > 22)
-            //    {
-            //        Error = Error + "The telephone must be less than 22 numbers" + " ";
-            //    }
+            if (Gender.Length < 1 | Gender.Length > 6)
+            {
+                //record the error 
+                Error = Error + "The gender must between 1 and 6 characters";
+                
+            }
 
-            //    }
-
-            //    catch
-            //    {
-
-            //        //return an error messages
-            //        return Error + "The telephone is not valid" + " ";
-            //    }
 
             //return an error messages
             return Error;

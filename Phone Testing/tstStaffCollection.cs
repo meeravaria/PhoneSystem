@@ -36,10 +36,10 @@ namespace Phone_Testing
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
-            TestItem.Gender = true;
+            TestItem.Gender = "Female";
             TestItem.PostCode = "LE3 OGH";
             TestItem.Street = "Gosling Street";
-            TestItem.Telephone = 0123456789;
+            TestItem.Telephone = 1234567891;
             //add the item to the test list 
             TestList.Add(TestItem);
             //assign the data to the property
@@ -64,10 +64,10 @@ namespace Phone_Testing
             TestStaff.DateOfBirth = "25/12/1996";
             TestStaff.FirstName = "Meera";
             TestStaff.LastName = "Varia";
-            TestStaff.Gender = true;
+            TestStaff.Gender = "Female";
             TestStaff.PostCode = "LE3 OGH";
             TestStaff.Street = "Gosling Street";
-            TestStaff.Telephone = 0123456789;
+            TestStaff.Telephone = 1234567891;
             //assign the data to the property 
             AllStaff.ThisStaff = TestStaff;
             //test to see that the two values are the same
@@ -93,8 +93,8 @@ namespace Phone_Testing
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
-            TestItem.Gender = true;
-            TestItem.Telephone = 0123456789;
+            TestItem.Gender = "Female";
+            TestItem.Telephone = 1234567891;
             //set ThisStaff to the test data
             AllStaff.ThisStaff = TestItem;
             //add the record
@@ -118,15 +118,15 @@ namespace Phone_Testing
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.Active = true;
-            TestItem.StaffID = 1;
+            TestItem.StaffID = 38;
             TestItem.County = "Buckinghamshire";
             TestItem.Street = "Gosling Street";
             TestItem.PostCode = "LE3 0GH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
-            TestItem.Gender = true;
-            TestItem.Telephone = 0123456789;
+            TestItem.Gender = "Female";
+            TestItem.Telephone = 1234567891;
             //set ThisStaff to the test data
             AllStaff.ThisStaff = TestItem;
             //add the record
@@ -154,15 +154,15 @@ namespace Phone_Testing
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.Active = true;
-            TestItem.StaffID = 1;
+            TestItem.StaffID = 49;
             TestItem.County = "Buckinghamshire";
             TestItem.Street = "Gosling Street";
             TestItem.PostCode = "LE3 0GH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
-            TestItem.Gender = true;
-            TestItem.Telephone = 0123456789;
+            TestItem.Gender = "Female";
+            TestItem.Telephone = 1234567891;
             //set ThisStaff to the test data
             AllStaff.ThisStaff = TestItem;
             //add the record
@@ -171,14 +171,14 @@ namespace Phone_Testing
             TestItem.StaffID = PrimaryKey;
             //modify the test data 
             TestItem.Active = true;
-            TestItem.StaffID = 2;
+            TestItem.StaffID = 4;
             TestItem.County = "London";
             TestItem.Street = "Richmond Road";
             TestItem.PostCode = "HA4 5JX";
             TestItem.DateOfBirth = "15/04/1992";
             TestItem.FirstName = "Jane";
             TestItem.LastName = "Doe";
-            TestItem.Gender = true;
+            TestItem.Gender = "Male";
             //set the record based on the new test data
             AllStaff.ThisStaff = TestItem;
             //update record 
