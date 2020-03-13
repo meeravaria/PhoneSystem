@@ -40,4 +40,9 @@ public partial class Delete : System.Web.UI.Page
         Response.Redirect("Default.aspx"); 
       
     }
+
+    protected void btnNO_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+    }
 }
