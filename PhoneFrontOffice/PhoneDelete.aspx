@@ -11,7 +11,7 @@
         <div>
         </div>
         <asp:Button ID="btnYes" runat="server" BackColor="#99CCFF" BorderStyle="Solid" OnClick="btnYes_Click" style="z-index: 1; left: 13px; top: 116px; position: absolute; width: 54px" Text="YES " />
-        <asp:Button ID="btnNO" runat="server" BackColor="#99CCFF" BorderStyle="Solid" style="z-index: 1; left: 88px; top: 116px; position: absolute; width: 53px" Text="NO " />
+        <asp:Button ID="btnNO" runat="server" BackColor="#99CCFF" BorderStyle="Solid" style="z-index: 1; left: 88px; top: 116px; position: absolute; width: 53px" Text="NO " OnClick="btnNO_Click" />
         <asp:Label ID="lblAreYouSure" runat="server" Font-Bold="True" style="z-index: 1; left: 10px; top: 75px; position: absolute" Text="Are you sure you want to delete this phone? "></asp:Label>
     </form>
 </body>
