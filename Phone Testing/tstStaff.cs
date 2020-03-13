@@ -15,8 +15,8 @@ namespace Phone_Testing
         string DateOfBirth = "25/12/1996";
         string FirstName = "Meera";
         string LastName = "Varia";
-        string Gender = "true";
-        string Telephone = "12345678910";
+        string Gender = "Female";
+        string Telephone = "1234567891";
 
 
         [TestMethod]
@@ -128,7 +128,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            bool TestData = true;
+            string TestData = "Female";
             //assign the data to the property
             AStaff.Gender = TestData;
             //test to see that the two values are the same
@@ -359,7 +359,7 @@ namespace Phone_Testing
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
-            if (AStaff.Gender != true)
+            if (AStaff.Gender != "Female")
             {
                 OK = false;
             }
@@ -1182,6 +1182,22 @@ namespace Phone_Testing
         }
 
         [TestMethod]
+        public void GenderMinLessOne()
+        {
+
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Gender = "Mal";
+            //invoke the method
+            Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
+            //test to see that the results is correct 
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
         public void GenderMin()
         {
 
@@ -1190,7 +1206,56 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Gender = "false"; 
+            string Gender = "M"; 
+            //invoke the method
+            Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
+            //test to see that the results is correct 
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMinPlusOne()
+        {
+
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Gender = "Malee";
+            //invoke the method
+            Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
+            //test to see that the results is correct 
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMid()
+        {
+
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Gender = "Mal";
+            //invoke the method
+            Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
+            //test to see that the results is correct 
+            Assert.AreEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void GenderMaxLessOne()
+        {
+
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Gender = "Femal";
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1206,13 +1271,44 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Gender = "true";
+            string Gender = "Female";
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
             Assert.AreEqual(Error, "");
         }
 
+        [TestMethod]
+        public void GenderMaxPlusOne()
+        {
+
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Gender = "Femalee";
+            //invoke the method
+            Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
+            //test to see that the results is correct 
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderExtremeMax()
+        {
+
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Gender = "Femaleeeee";
+            //invoke the method
+            Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
+            //test to see that the results is correct 
+            Assert.AreNotEqual(Error, "");
+        }
 
         [TestMethod]
         public void TelephoneMinLessOne()
@@ -1223,7 +1319,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "1"; //this should trigger an error - 1 number
+            string Telephone = "123456789"; //this should trigger an error - 1 number
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1240,7 +1336,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "11"; //this shouldn't trigger an error - 11 number
+            string Telephone = "1234567891"; //this shouldn't trigger an error - 11 number
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1256,7 +1352,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "12"; //this should trigger an error - 12 numbers
+            string Telephone = "123456789112"; //this should trigger an error - 12 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1272,7 +1368,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "10"; //this should trigger an error - 10 number
+            string Telephone = "123456789"; //this should trigger an error - 10 number
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1288,7 +1384,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "11"; //this should trigger an error - 11 numbers
+            string Telephone = "1234567891"; //this should trigger an error - 11 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1304,7 +1400,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "12"; //this should trigger an error - 12 numbers
+            string Telephone = "123456789112"; //this should trigger an error - 12 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1320,11 +1416,11 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "6"; //this should trigger an error - 6 numbers
+            string Telephone = "123456"; //this should trigger an error - 6 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
-            Assert.AreEqual(Error, "");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -1336,7 +1432,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "22"; //this should trigger an error - 22 characters
+            string Telephone = "123456789112123456789112"; //this should trigger an error - 22 characters
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 

@@ -148,7 +148,7 @@ namespace PhoneClasses
             AStaff.DateOfBirth = Convert.ToString(DB.DataTable.Rows[Index]["DateOfBirth"]);
             AStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
             AStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
-            AStaff.Gender = Convert.ToBoolean(DB.DataTable.Rows[Index]["Gender"]);
+            AStaff.Gender = Convert.ToString(DB.DataTable.Rows[Index]["Gender"]);
             AStaff.Telephone = Convert.ToInt32(DB.DataTable.Rows[Index]["Telephone"]);
             //add the record to the private data member 
             mStaffList.Add(AStaff);
