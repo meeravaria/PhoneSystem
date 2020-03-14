@@ -183,7 +183,7 @@ namespace Phone_Testing
             //boolean variable to store the result of the validation 
             Boolean Found = false;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method 
             Found = APhone.Find(PhoneID);
             //test to see that the result is correct 
@@ -1254,11 +1254,11 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
-            if (APhone.PhoneID != 1)
+            if (APhone.PhoneID != 3)
             {
                 OK = false;
             }
@@ -1279,7 +1279,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
@@ -1305,7 +1305,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
@@ -1331,7 +1331,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
@@ -1356,7 +1356,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
@@ -1381,7 +1381,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
@@ -1406,11 +1406,11 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
-            if (APhone.Description != "A")
+            if (APhone.Description != "This is the latest phone.")
             {
                 OK = false;
             }
@@ -1432,7 +1432,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
@@ -1459,11 +1459,11 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
-            if (APhone.Model != "11 Pro")
+            if (APhone.Model != "11")
             {
                 OK = false;
             }
@@ -1485,7 +1485,7 @@ namespace Phone_Testing
             //boolean variable to record if data is OK (assume it is) 
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 PhoneID = 1;
+            Int32 PhoneID = 3;
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
