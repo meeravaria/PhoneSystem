@@ -216,7 +216,7 @@ namespace PhoneClasses
 
 
 
-        public string Valid(string capacity, string Price, string Colour, string dateAdded, string Description, string Make, string Model, string stockStatus)
+        public string Valid(string Capacity, string Price, string Colour, string DateAdded, string Description, string Make, string Model, string stockStatus)
         {
             //create a string variable to store the error 
             String Error = "";
@@ -239,7 +239,7 @@ namespace PhoneClasses
             try
             {
                  //copy the dateAdded value to the DateTemp variable
-                DateTemp = Convert.ToDateTime(dateAdded);
+                DateTemp = Convert.ToDateTime(DateAdded);
                 if(DateTemp < DateTime.Now.Date)
                 {
                     //record the error 
@@ -323,7 +323,7 @@ namespace PhoneClasses
 
             try
             {
-                Int32 TempCapacity =Convert.ToInt32( capacity);
+                Int32 TempCapacity = Convert.ToInt32(Capacity);
                 //if Capacity is blank
                 if (TempCapacity == 0)
                 {
