@@ -56,7 +56,7 @@ public partial class APhone : System.Web.UI.Page
         else
         {
             //report an error 
-            lblError.Text = "There were problems with the data entered " + Error; 
+            lblError.Text = "There were problems with the data entered " + Error;
         }
         
      }
@@ -93,7 +93,7 @@ public partial class APhone : System.Web.UI.Page
         else
         {
             //report an error 
-            lblError.Text = "There were problems with the data entered " + Error;
+            lblError.Text = "There were problems with the data entered" + Error;
         }
 
     }
