@@ -226,7 +226,7 @@ namespace Phone_Testing
             //var to store outcome
             Boolean OK = true;
             //apply a make that does exist
-            FilteredPhones.ReportByMake("9");
+            FilteredPhones.ReportByMake("Nokia");
             //check that the correct number of records are found
             if (FilteredPhones.Count == 2)
             {
