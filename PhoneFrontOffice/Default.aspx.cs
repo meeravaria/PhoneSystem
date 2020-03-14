@@ -33,7 +33,7 @@ public partial class _Default : System.Web.UI.Page
         //set the name of the primary key 
         lstPhones.DataValueField = "PhoneID";
         //set the data field to display 
-        lstPhones.DataTextField = "PhoneID";
+        lstPhones.DataTextField = "Make";
         //bind the data to the list 
         lstPhones.DataBind();
     }
@@ -100,47 +100,36 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnApply_Click(object sender, EventArgs e)
     {
-
+        //declare var to store the record count 
+        Int32 RecordCount;
+        RecordCount = DisplayPhone(txtPhoneSearch.Text);
+        lblError.Text = RecordCount + " Record Found";
     }
 
     protected void btnDisplayAll_Click(object sender, EventArgs e)
     {
         //display all phones
-        DisplayPhone();
+        DisplayPhone("");
     }
 
-    Int32 DisplayPhone()
+    Int32 DisplayPhone(string MakeFilter) 
     {
-        Int32 PhoneID; //Var to store the primary key 
-        Int32 Capacity; //Var to store the Capacity 
-        Decimal Price; //Var to store the Price 
-        String Colour; //Var to store the Colour 
-        DateTime DateAdded; // Var to store the DateAdded 
-        String Description; //Var to store the Description 
+        Int32 PhoneID; //Var to store the primary key  
         String Make; //Var to store the Make
         String Model; //Var to store the Model 
-        Boolean Active; //Var to store the Active 
-        Boolean StockStatus; //Var to store the StockStatus 
-        ;//Create an instance of the address book class 
-        clsPhoneCollection Phone = new clsPhoneCollection();
+        clsPhoneCollection MakeSearch= new clsPhoneCollection();//Create an instance of the address book class 
+        MakeSearch.ReportByMake(MakeFilter);//invoke the phone make filter
         Int32 RecordCount; //Var to store the count of records 
         Int32 Index = 0; //Var to store the index for the loop
-        RecordCount = Phone.Count; //get the count of records 
-        lstPhones.Items.Clear();
+        RecordCount = MakeSearch.Count; //get the count of records 
+        lstPhones.Items.Clear(); //clear the list box
         while (Index < RecordCount) //While there are records to process
         {
-            PhoneID = Phone.PhoneList[Index].PhoneID; //get primary key 
-            Capacity = Phone.PhoneList[Index].Capacity; //get Capacity
-            Price = Phone.PhoneList[Index].Price; //get Price
-            Colour = Phone.PhoneList[Index].Colour; //get Colour
-            DateAdded = Phone.PhoneList[Index].DateAdded; //get DateAdded
-            Description = Phone.PhoneList[Index].Description; //get Description
-            Make = Phone.PhoneList[Index].Make; //get Make
-            Model = Phone.PhoneList[Index].Model; //get Model
-            Active = Phone.PhoneList[Index].Active; //get Active
-            StockStatus = Phone.PhoneList[Index].StockStatus; //get StockStatus
+            PhoneID = MakeSearch.PhoneList[Index].PhoneID; //get primary key 
+            Make = MakeSearch.PhoneList[Index].Make; //get Make
+            Model = MakeSearch.PhoneList[Index].Model; //get Model
             //create a new entry for the list box
-            ListItem NewEntry = new ListItem(PhoneID.ToString() + " - " + Make + " ");
+            ListItem NewEntry = new ListItem(Make + " " + Model, PhoneID.ToString());
             lstPhones.Items.Add(NewEntry);
             Index++;
         }
