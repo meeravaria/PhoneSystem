@@ -33,7 +33,7 @@ public partial class APhone : System.Web.UI.Page
         //create an instance of the phone book
         PhoneClasses.clsPhoneCollection PhoneBook = new PhoneClasses.clsPhoneCollection();
         //validate the data on the web form 
-        String Error = PhoneBook.ThisPhone.Valid(txtCapacity.Text,txtPrice.Text, txtColour.Text, txtDateAdded.Text, txtDescription.Text, txtMake.Text, txtModel.Text, chkStockStatus.Checked, chkActive.Checked); 
+        String Error = PhoneBook.ThisPhone.Valid(txtCapacity.Text,txtPrice.Text, txtColour.Text, txtDateAdded.Text, txtDescription.Text, txtMake.Text, txtModel.Text); 
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -56,7 +56,7 @@ public partial class APhone : System.Web.UI.Page
         else
         {
             //report an error 
-            lblError.Text = "There were problems with the data entered " + Error;
+            lblError.Text = "There were problems with the data entered : " + "  " + Error;
         }
         
      }
@@ -68,7 +68,7 @@ public partial class APhone : System.Web.UI.Page
         //create an instance of the phone book
         PhoneClasses.clsPhoneCollection PhoneBook = new PhoneClasses.clsPhoneCollection();
         //validate the data on the web form 
-        String Error = PhoneBook.ThisPhone.Valid(txtCapacity.Text, txtPrice.Text, txtColour.Text, txtDateAdded.Text, txtDescription.Text, txtMake.Text, txtModel.Text, chkStockStatus.Checked, chkActive.Checked);
+        String Error = PhoneBook.ThisPhone.Valid(txtCapacity.Text, txtPrice.Text, txtColour.Text, txtDateAdded.Text, txtDescription.Text, txtMake.Text, txtModel.Text);
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -93,7 +93,7 @@ public partial class APhone : System.Web.UI.Page
         else
         {
             //report an error 
-            lblError.Text = "There were problems with the data entered" + Error;
+            lblError.Text = "There were problems with the data entered : " + "  " + Error;
         }
 
     }
@@ -131,11 +131,6 @@ public partial class APhone : System.Web.UI.Page
             //update the record 
             Update(); 
         }
-
-       
-        //all done so redirect back to the main page 
-        Response.Redirect("Default.aspx"); 
-    
 
     }
 

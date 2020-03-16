@@ -50,10 +50,7 @@ namespace PhoneClasses
             }
         }
 
-        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, bool checked1, bool checked2)
-        {
-            return "";
-        }
+        
 
         public int PhoneID
         {
@@ -216,7 +213,7 @@ namespace PhoneClasses
 
 
 
-        public string Valid(string Capacity, string Price, string Colour, string DateAdded, string Description, string Make, string Model, string stockStatus)
+        public string Valid(string Capacity, string Price, string Colour, string DateAdded, string Description, string Make, string Model)
         {
             //create a string variable to store the error 
             String Error = "";
@@ -243,7 +240,7 @@ namespace PhoneClasses
                 if(DateTemp < DateTime.Now.Date)
                 {
                     //record the error 
-                    Error = Error + "The date cannot be in the past." + " "; 
+                    Error = Error + "The date cannot be in the past. Please enter today's date! " + "  "; 
                 }
 
                
@@ -251,7 +248,7 @@ namespace PhoneClasses
                 if (DateTemp > DateTime.Now.Date)
                 {
                     //record the error
-                    Error = Error + "The date cannot be in the future. " + " ";
+                    Error = Error + "The date cannot be in the future. Please enter today's date! " + "  ";
                 }
 
             }

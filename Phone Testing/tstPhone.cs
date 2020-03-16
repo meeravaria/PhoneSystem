@@ -19,7 +19,6 @@ namespace Phone_Testing
         string Description = "Old Phone";
         string Make = "Nokia";
         string Model = "550";
-        string StockStatus = "false";
 
         [TestMethod]
         public void InstanceOK()
@@ -199,7 +198,7 @@ namespace Phone_Testing
             //string variable to store any error message 
             String Error = "";
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -220,7 +219,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = ""; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -237,7 +236,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = "a"; //this should  be ok
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -255,7 +254,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = "aa"; //this should  be ok
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -272,7 +271,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should  be ok
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -289,7 +288,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should  be ok
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -307,7 +306,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -325,7 +324,7 @@ namespace Phone_Testing
             string Colour = ""; //this should fail
             Colour = Colour.PadRight(100, 'a');
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -342,7 +341,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Colour = "aaaaaaaaaaaaaaaaaaaaaaaaa"; //this should  be ok
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -369,7 +368,7 @@ namespace Phone_Testing
             //convert the date variable to a string variable 
             string DateAdded = TestDate.ToString();
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -392,7 +391,7 @@ namespace Phone_Testing
             //convert the date variable to a string variable
             string DateAdded = TestDate.ToString();
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -412,7 +411,7 @@ namespace Phone_Testing
             //convert the date variable to a string variable
             string DateAdded = TestDate.ToString();
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -434,7 +433,7 @@ namespace Phone_Testing
             //convert the date variable to a string variable
             string DateAdded = TestDate.ToString();
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -456,7 +455,7 @@ namespace Phone_Testing
             //convert the date variable to a string variable
             string DateAdded = TestDate.ToString();
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -471,7 +470,7 @@ namespace Phone_Testing
             //set the DateAdded to a non data value 
             string DateAdded = "this is not a date!";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -491,7 +490,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Description = ""; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -507,7 +506,7 @@ namespace Phone_Testing
             //this should pass
             string Description = "a";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -522,7 +521,7 @@ namespace Phone_Testing
             //this should pass
             string Description = "aa";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -539,7 +538,7 @@ namespace Phone_Testing
             string Description = ""; //this should pass
             Description = Description.PadLeft(499, 'a');
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -557,7 +556,7 @@ namespace Phone_Testing
             string Description = "";
             Description = Description.PadRight(500, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -573,7 +572,7 @@ namespace Phone_Testing
             string Description = "";
             Description = Description.PadRight(501, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -588,7 +587,7 @@ namespace Phone_Testing
             //this should pass
             string Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -605,7 +604,7 @@ namespace Phone_Testing
             string Description = ""; //this should fail
             Description = Description.PadRight(1000, 'a');
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -627,7 +626,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Make = ""; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -643,7 +642,7 @@ namespace Phone_Testing
             // this should pass
             string Make = "a";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -660,7 +659,7 @@ namespace Phone_Testing
             //this should pass
             string Make = "aa";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -678,7 +677,7 @@ namespace Phone_Testing
             string Make = ""; //this should pass
             Make = Make.PadLeft(49, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -695,7 +694,7 @@ namespace Phone_Testing
             string Make = "";
             Make = Make.PadRight(50, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -712,7 +711,7 @@ namespace Phone_Testing
             string Make = "";
             Make = Make.PadRight(51, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -727,7 +726,7 @@ namespace Phone_Testing
             // this should pass
             string Make = "Lorem ipsum dolor sit ame";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             // test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -744,7 +743,7 @@ namespace Phone_Testing
             string Make = ""; //this should fail
             Make = Make.PadRight(1000, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -766,7 +765,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Model = ""; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -782,7 +781,7 @@ namespace Phone_Testing
             // this should pass
             string Model = "aaa";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -799,7 +798,7 @@ namespace Phone_Testing
             //this should pass
             string Model = "aaaa";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -817,7 +816,7 @@ namespace Phone_Testing
             string Model = ""; //this should pass
             Model = Model.PadLeft(9, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -834,7 +833,7 @@ namespace Phone_Testing
             string Model = "";
             Model = Model.PadRight(10, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -851,7 +850,7 @@ namespace Phone_Testing
             string Model = "";
             Model = Model.PadRight(11, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -866,7 +865,7 @@ namespace Phone_Testing
             // this should pass
             string Model = "Lore";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             // test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -883,47 +882,9 @@ namespace Phone_Testing
             string Model = ""; //this should fail
             Model = Model.PadRight(50, 'a');
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
-
-        }
-
-        /// <summary>
-        /// STOCKSTATUS
-        /// </summary>
-
-        [TestMethod]
-        public void StockStatusMin()
-
-        {
-            //create an instance of the filtered data
-            clsPhone APhone = new clsPhone();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string StockStatus = "false";
-            //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-
-        }
-
-        [TestMethod]
-        public void StockStatusMax()
-
-        {
-            //create an instance of the filtered data
-            clsPhone APhone = new clsPhone();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string StockStatus = "true";
-            //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
 
         }
 
@@ -942,7 +903,7 @@ namespace Phone_Testing
             //this should pass
             string Price = "999.99";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -958,7 +919,7 @@ namespace Phone_Testing
             //this should pass
             string Price = "0.00";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -974,7 +935,7 @@ namespace Phone_Testing
             // this should pass
             string Price = "500.00";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             // test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -990,7 +951,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Price = "500000.00";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -1007,7 +968,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Price = "-100";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -1024,7 +985,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Price = "-0.01"; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -1041,7 +1002,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string Price = "1000.00"; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreNotEqual(Error, "");
 
@@ -1058,7 +1019,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string  Price = "0.01"; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -1075,7 +1036,7 @@ namespace Phone_Testing
             //create some test data to pass to the method 
             string  Price = "999.98"; //this should fail
             //invoke the method 
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct 
             Assert.AreEqual(Error, "");
 
@@ -1097,7 +1058,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "1";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
 
@@ -1115,7 +1076,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "100";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
 
@@ -1132,7 +1093,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "10";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
 
@@ -1149,7 +1110,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "10";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
 
@@ -1167,7 +1128,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "10";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
 
@@ -1187,7 +1148,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "0";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -1203,7 +1164,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "1000";
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -1220,7 +1181,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "1000000000"; //this should fail
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -1237,7 +1198,7 @@ namespace Phone_Testing
             //create some test data to pass to the method
             string Capacity = "-1000000000"; //this should fail
             //invoke the method
-            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model, StockStatus);
+            Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
 

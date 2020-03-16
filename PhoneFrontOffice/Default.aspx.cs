@@ -57,7 +57,7 @@ public partial class _Default : System.Web.UI.Page
         else
         {
             //display an error 
-            lblError.Text = "Please select a record to delete from the list";
+            lblError.Text = "Please select a record to delete from the list! ";
         }
     }
 
@@ -82,7 +82,7 @@ public partial class _Default : System.Web.UI.Page
         else
         {
             //display an error 
-            lblError.Text = "Please select a record to update from the list";
+            lblError.Text = "Please select a record to update from the list! ";
         }
     }
 
@@ -103,7 +103,7 @@ public partial class _Default : System.Web.UI.Page
         //declare var to store the record count 
         Int32 RecordCount;
         RecordCount = DisplayPhone(txtPhoneSearch.Text);
-        lblError.Text = RecordCount + " Record Found";
+        lblError.Text = RecordCount + " Record Found ";
     }
 
     protected void btnDisplayAll_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ public partial class _Default : System.Web.UI.Page
         Int32 PhoneID; //Var to store the primary key  
         String Make; //Var to store the Make
         String Model; //Var to store the Model 
-        clsPhoneCollection MakeSearch= new clsPhoneCollection();//Create an instance of the address book class 
+        clsPhoneCollection MakeSearch= new clsPhoneCollection();//Create an instance of the phone book class 
         MakeSearch.ReportByMake(MakeFilter);//invoke the phone make filter
         Int32 RecordCount; //Var to store the count of records 
         Int32 Index = 0; //Var to store the index for the loop
