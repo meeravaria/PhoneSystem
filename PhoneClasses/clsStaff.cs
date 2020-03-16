@@ -288,7 +288,7 @@ namespace PhoneClasses
             if (Telephone.Length != 10 )
             {
                 //record the error 
-                Error = Error + "The telephone must less than 10";
+                Error = Error + "The telephone must be 10 numbers";
             }
 
             if (Gender.Length <= 0)

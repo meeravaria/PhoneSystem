@@ -231,14 +231,14 @@ namespace Phone_Testing
             //check that the correct numbe of records are found
             if (FilteredStaff.Count == 2)
             {
-                //check that the first record is ID 5
-                if (FilteredStaff.StaffList[0].StaffID != 30)
+                //check that the first record is ID 847
+                if (FilteredStaff.StaffList[0].StaffID != 847)
                 {
                     OK = false;
                 }
 
-                //check the first record is ID 37
-                if (FilteredStaff.StaffList[1].StaffID != 31)
+                //check the first record is ID 848
+                if (FilteredStaff.StaffList[1].StaffID != 848)
                 {
                     OK = false;
                 }
@@ -260,7 +260,7 @@ namespace Phone_Testing
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             //test to see that the result is correct

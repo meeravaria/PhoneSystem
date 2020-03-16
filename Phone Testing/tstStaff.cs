@@ -171,11 +171,11 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
-            if (AStaff.StaffID != 55)
+            if (AStaff.StaffID != 847)
             {
                 OK = false;
             }
@@ -194,7 +194,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -217,7 +217,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -240,7 +240,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -263,7 +263,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -286,7 +286,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -309,7 +309,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -332,7 +332,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -355,7 +355,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
@@ -378,7 +378,7 @@ namespace Phone_Testing
             //boolean variable to record if data is ok (assume it is)
             Boolean OK = true;
             //create some test data to use it with the method
-            Int32 StaffID = 55;
+            Int32 StaffID = 847;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
