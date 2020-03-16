@@ -14,7 +14,7 @@
         <asp:Label ID="lblCapacity" runat="server" Font-Bold="True" style="z-index: 1; left: 138px; top: 62px; position: absolute; bottom: 780px" Text="Capacity : "></asp:Label>
         <asp:Label ID="lblPrice" runat="server" Font-Bold="True" style="z-index: 1; left: 162px; top: 94px; position: absolute; bottom: 751px;" Text="Price :"></asp:Label>
         <asp:Label ID="lblColour" runat="server" Font-Bold="True" style="z-index: 1; left: 150px; top: 126px; position: absolute; bottom: 716px; right: 837px;" Text="Colour :"></asp:Label>
-        <asp:Label ID="lblDateAdded" runat="server" Font-Bold="True" style="z-index: 1; left: 120px; top: 162px; position: absolute" Text="DateAdded : "></asp:Label>
+        <asp:Label ID="lblDateAdded" runat="server" Font-Bold="True" style="z-index: 1; left: 157px; top: 160px; position: absolute" Text="Date : "></asp:Label>
         <asp:Label ID="lblMake" runat="server" Font-Bold="True" style="z-index: 1; left: 148px; top: 262px; position: absolute; width: 50px;" Text="Make :"></asp:Label>
         <asp:Label ID="lblModel" runat="server" Font-Bold="True" style="z-index: 1; left: 144px; top: 298px; position: absolute; height: 19px; width: 53px;" Text="Model : "></asp:Label>
         <asp:Label ID="lblStockStatus" runat="server" Font-Bold="True" style="z-index: 1; left: 105px; top: 331px; position: absolute" Text="Stock Status : "></asp:Label>
