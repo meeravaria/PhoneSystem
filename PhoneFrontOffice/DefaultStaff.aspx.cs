@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using PhoneClasses;
 
 public partial class DefaultStaff : System.Web.UI.Page
 {
@@ -18,12 +19,12 @@ public partial class DefaultStaff : System.Web.UI.Page
         if (IsPostBack == false)
         {
             //populate the list of staff
-            DisplayStaff();
+            DisplayPostCode();
         }
 
     }
 
-    void DisplayStaff()
+    void DisplayPostCode()
     {
         //create an instance of the county collection 
         PhoneClasses.clsStaffCollection Staff = new PhoneClasses.clsStaffCollection();
@@ -32,7 +33,7 @@ public partial class DefaultStaff : System.Web.UI.Page
         //set the name of the primary key
         lstStaff.DataValueField = "StaffID";
         //set the data field to display
-        lstStaff.DataTextField = "FirstName";
+        lstStaff.DataTextField = "PostCode";
         //bind the data to the list
         lstStaff.DataBind();
     }
@@ -93,11 +94,45 @@ public partial class DefaultStaff : System.Web.UI.Page
 
     protected void btnDisplayAll_Click1(object sender, EventArgs e)
     {
-
+        ////display all staff 
+        DisplayPostCode("");
     }
 
+    
+
+     protected void btnApply_Click(object sender, EventArgs e)
+        {
+            Int32 RecordCount;
+            RecordCount = DisplayPostCode(txtStaffSearch.Text);
+            lblError.Text = RecordCount + "Record Found";
+
+        }
 
 
+    Int32 DisplayPostCode(string PostCodeFilter)
+    {
+        Int32 StaffID; //Var to store the primary key  
+        String PostCode; //Var to store the postcode
+        String FirstName; //Var to store the firstname 
+        clsStaffCollection PostCodeSearch = new clsStaffCollection();//Create an instance of the staff search
+        PostCodeSearch.ReportByPostCode(PostCodeFilter);//invoke the staff postcode filter
+        Int32 RecordCount; //Var to store the count of records 
+        Int32 Index = 0; //Var to store the index for the loop
+        RecordCount = PostCodeSearch.Count; //get the count of records 
+        lstStaff.Items.Clear(); //clear the list box
+        while (Index < RecordCount) //While there are records to process
+        {
+            StaffID = PostCodeSearch.StaffList[Index].StaffID; //get primary key 
+            PostCode = PostCodeSearch.StaffList[Index].PostCode; //get postcode
+            FirstName = PostCodeSearch.StaffList[Index].FirstName; //get firstname
+            //create a new entry for the list box
+            ListItem NewEntry = new ListItem(PostCode + " " + FirstName, StaffID.ToString());
+            lstStaff.Items.Add(NewEntry);
+            Index++;
+        }
+        return RecordCount; //return the count of records found
+
+    }
 
     protected void lstStaff_SelectedIndexChanged1(object sender, EventArgs e)
 
@@ -146,7 +181,11 @@ public partial class DefaultStaff : System.Web.UI.Page
 
 
 
-  
+
+
+
+
+   
 }
 
    

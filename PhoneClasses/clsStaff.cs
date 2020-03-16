@@ -204,7 +204,7 @@ namespace PhoneClasses
             //create a string variable to store the error
             string Error = "";
             //if the county is blank
-            if (County.Length == 3)
+            if (County.Length <= 3)
             {
                 //record the error
                 Error = Error + "The county must be more than 3 characters";
@@ -218,7 +218,7 @@ namespace PhoneClasses
             }
 
             //if the dateofbirth is blank
-            if (DateOfBirth.Length == 4)
+            if (DateOfBirth.Length <= 4)
             {
                 //record an error 
                 Error = Error + "The date of birth must be more than 4 characters";
@@ -230,7 +230,7 @@ namespace PhoneClasses
                 Error = Error + "The date of birth must be less than 10 characters";
             }
             // if the first name is blank
-            if (FirstName.Length == 1)
+            if (FirstName.Length <= 1)
             {
                 //record the error
                 Error = Error + "The first name must be more than 1 character ";
@@ -243,7 +243,7 @@ namespace PhoneClasses
 
             }
             //if last name is blank 
-            if (LastName.Length == 1)
+            if (LastName.Length <= 1)
             {
                 Error = Error + "The last name must be more than 1 character";
             }
@@ -254,7 +254,7 @@ namespace PhoneClasses
                 Error = Error + "The last name must be less than 25 characters";
             }
             //if the postcode is blank 
-            if (PostCode.Length ==1)
+            if (PostCode.Length <=1)
             {
                 //record the error
                 Error = Error + "The postcode must be more than 1 character";           
@@ -266,7 +266,7 @@ namespace PhoneClasses
                 Error = Error + "The postcode must less than 7 characters";
             }
             // if street is blank
-            if (Street.Length == 3)
+            if (Street.Length <= 3)
             {
                 //record the error
                 Error = Error + "The street must be more than 3 characters";
@@ -291,7 +291,7 @@ namespace PhoneClasses
                 Error = Error + "The telephone must less than 10";
             }
 
-            if (Gender.Length == 0)
+            if (Gender.Length <= 0)
             {
                 //record the error 
                 Error = Error + "The gender must not be blank";
