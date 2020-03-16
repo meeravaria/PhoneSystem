@@ -43,29 +43,14 @@ public partial class AStaff : System.Web.UI.Page
         Active.Checked = StaffSystem.ThisStaff.Active;
         txtCounty.Text = StaffSystem.ThisStaff.County;
         txtGender.Text = StaffSystem.ThisStaff.Gender;
+        txtTelephone.Text = StaffSystem.ThisStaff.Telephone.ToString();
 
     }
 
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
-        ////create a new instance of clsStaff
-        //clsStaff AStaff = new clsStaff();
-        ////capture the StaffID
-        ////AStaff.StaffID = Convert.ToInt32(txtStaffID.Text);
-        //AStaff.County = Convert.ToString(txtCounty.Text);
-        //AStaff.Street = Convert.ToString(txtStreet.Text);
-        //AStaff.PostCode = Convert.ToString(txtPostcode.Text);
-        //AStaff.DateOfBirth = Convert.ToString(txtDOB.Text);
-        //AStaff.FirstName = Convert.ToString(txtFirstName.Text);
-        //AStaff.LastName = Convert.ToString(txtLastName.Text);
-        //AStaff.Gender = Convert.ToString(txtGender.Text);
-        //AStaff.Telephone = Convert.ToInt32(txtTelephone.Text);
-        //AStaff.Active = Convert.ToBoolean(Active.Checked);
-        ////store the staff in the session object 
-        //Session["AStaff"] = AStaff;
-        ////redirect to the viewer page
-        //Response.Redirect("AStaffViewer.aspx");
+       
 
         if (StaffID == -1)
         {
@@ -78,8 +63,6 @@ public partial class AStaff : System.Web.UI.Page
             Update();
         }
        
-        //all done so redirect back to main page
-        Response.Redirect("DefaultStaff.aspx");
     }
 
         //function for adding new records
@@ -88,7 +71,7 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff 
         clsStaffCollection StaffSystem = new clsStaffCollection();
         //validate the data on the web forms
-        String Error =  StaffSystem.ThisStaff.Valid(txtCounty.Text, txtFirstName.Text, txtLastName.Text, txtGender.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
+        String Error =  StaffSystem.ThisStaff.Valid(txtCounty.Text, txtStreet.Text, txtPostcode.Text, txtDOB.Text, txtFirstName.Text, txtLastName.Text, txtGender.Text, txtTelephone.Text);
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -121,12 +104,12 @@ public partial class AStaff : System.Web.UI.Page
         //create an instance of the staff
         PhoneClasses.clsStaffCollection StaffSystem = new PhoneClasses.clsStaffCollection();
         //validate the data on the web form
-        String Error = StaffSystem.ThisStaff.Valid(txtCounty.Text, txtFirstName.Text, txtLastName.Text, txtGender.Text, txtPostcode.Text, txtDOB.Text, txtStreet.Text, txtTelephone.Text);
+        String Error = StaffSystem.ThisStaff.Valid(txtCounty.Text, txtStreet.Text, txtPostcode.Text, txtDOB.Text, txtFirstName.Text, txtLastName.Text, txtGender.Text, txtTelephone.Text);
         //if the data is ok then add it to the object
         if (Error == "")
         {
             //find the record to update
-            //StaffSystem.ThisStaff.Find(StaffID);
+            StaffSystem.ThisStaff.Find(StaffID);
             //get the data entered by the user
             StaffSystem.ThisStaff.County = txtCounty.Text;
             StaffSystem.ThisStaff.FirstName = txtFirstName.Text;
@@ -149,15 +132,20 @@ public partial class AStaff : System.Web.UI.Page
         }
         }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DefaultStaff.aspx");
+        }
+
     protected void Active_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+        protected void btnApply_Click(object sender, EventArgs e)
+        {
 
-    protected void btnCancel_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("DefaultStaff.aspx");
-    }
+        }
+   
 
     protected void ddlGender_SelectedIndexChanged(object sender, EventArgs e)
     {

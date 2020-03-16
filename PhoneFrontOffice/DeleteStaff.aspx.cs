@@ -24,7 +24,7 @@ public partial class DeleteStaff : System.Web.UI.Page
         //create a new instance of the staff
         clsStaffCollection Staff = new clsStaffCollection();
         //find the record to delete
-        //Staff.ThisStaff.Find(StaffID);
+        Staff.ThisStaff.Find(StaffID);
         //delete the record 
         Staff.Delete();
     }
@@ -35,6 +35,11 @@ public partial class DeleteStaff : System.Web.UI.Page
         //delete he record 
         Delete_Staff();
         //redirect back to the main page
+        Response.Redirect("DefaultStaff.aspx");
+    }
+
+    protected void btnNo_Click(object sender, EventArgs e)
+    {
         Response.Redirect("DefaultStaff.aspx");
     }
 }

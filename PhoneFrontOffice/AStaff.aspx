@@ -23,8 +23,8 @@
         <asp:TextBox ID="txtStreet" runat="server" style="z-index: 1; left: 98px; top: 231px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtPostcode" runat="server" style="z-index: 1; left: 119px; top: 292px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtTelephone" runat="server" style="z-index: 1; left: 121px; top: 325px; position: absolute"></asp:TextBox>
-        <asp:CheckBox ID="Active" runat="server" style="z-index: 1; left: 50px; top: 363px; position: absolute; right: 528px" OnCheckedChanged="Active_CheckedChanged" Text="Active Staff" />
-        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 55px; top: 419px; position: absolute; width: 302px; height: 125px;"></asp:Label>
+        <asp:CheckBox ID="Active" runat="server" style="z-index: 1; left: 50px; top: 364px; position: absolute; right: 528px" OnCheckedChanged="Active_CheckedChanged" Text="Active Staff" />
+        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 37px; top: 457px; position: absolute; width: 302px; height: 125px;"></asp:Label>
         <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 164px; top: 405px; position: absolute; width: 58px" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 228px; top: 404px; position: absolute; margin-bottom: 0px" Text="Cancel" OnClick="btnCancel_Click" />
         <asp:TextBox ID="txtCounty" runat="server" style="z-index: 1; left: 113px; top: 263px; position: absolute"></asp:TextBox>
