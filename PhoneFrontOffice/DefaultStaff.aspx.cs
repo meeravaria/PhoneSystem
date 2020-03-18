@@ -104,7 +104,7 @@ public partial class DefaultStaff : System.Web.UI.Page
         {
             Int32 RecordCount;
             RecordCount = DisplayPostCode(txtStaffSearch.Text);
-            lblError.Text = RecordCount + "Record Found";
+            lblError.Text = RecordCount + " Record Found";
 
         }
 
