@@ -11,7 +11,7 @@ namespace Phone_Testing
         //create some data to pass to the method
         string County = "Buckinghamshire";
         string Street = "Gosling Street";
-        string PostCode = "LE3 0GH";
+        string PostCode = "LE3 0BH";
         string DateOfBirth = "25/12/1996";
         string FirstName = "Meera";
         string LastName = "Varia";
@@ -50,7 +50,7 @@ namespace Phone_Testing
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            string TestData = "Buckingahmshire";
+            string TestData = "Buckinghamshire";
             //assign the data to the property
             AStaff.County = TestData;
             //test to see that the two values are the same
@@ -221,7 +221,7 @@ namespace Phone_Testing
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
-            if (AStaff.Street != "Gosling Street")
+            if (AStaff.Street != "Western Road")
             {
                 OK = false;
             }
@@ -267,7 +267,7 @@ namespace Phone_Testing
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
-            if (AStaff.PostCode != "LE3 0GH")
+            if (AStaff.PostCode != "LE3 0BH")
             {
                 OK = false;
             }
@@ -382,7 +382,7 @@ namespace Phone_Testing
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff no
-            if (AStaff.Telephone != 145678932)
+            if (AStaff.Telephone != 1796215632)
             {
                 OK = false;
             }
@@ -1384,7 +1384,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "1234567891"; //this should trigger an error - 11 numbers
+            string Telephone = "1234567891"; //this shouldn't trigger an error - 10 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 
@@ -1400,7 +1400,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Telephone = "123456789112"; //this should trigger an error - 12 numbers
+            string Telephone = "123456789112"; //this should trigger an error - 11 numbers
             //invoke the method
             Error = AStaff.Valid(County, Street, PostCode, DateOfBirth, FirstName, LastName, Gender, Telephone);
             //test to see that the results is correct 

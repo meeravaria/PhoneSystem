@@ -32,13 +32,13 @@ namespace Phone_Testing
             //set its properties
             TestItem.Active = true;
             TestItem.County = "Buckinghamshire";
-            TestItem.StaffID = 1;
+            TestItem.StaffID = 847;
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
             TestItem.Gender = "Female";
-            TestItem.PostCode = "LE3 OGH";
-            TestItem.Street = "Gosling Street";
+            TestItem.PostCode = "LE3 0BH";
+            TestItem.Street = "Western Road";
             TestItem.Telephone = 1234567891;
             //add the item to the test list 
             TestList.Add(TestItem);
@@ -60,13 +60,13 @@ namespace Phone_Testing
             //set the properties of the test object 
             TestStaff.Active = true;
             TestStaff.County = "Buckinghamshire";
-            TestStaff.StaffID = 1;
+            TestStaff.StaffID = 847;
             TestStaff.DateOfBirth = "25/12/1996";
             TestStaff.FirstName = "Meera";
             TestStaff.LastName = "Varia";
             TestStaff.Gender = "Female";
-            TestStaff.PostCode = "LE3 OGH";
-            TestStaff.Street = "Gosling Street";
+            TestStaff.PostCode = "LE3 0BH";
+            TestStaff.Street = "Western Road";
             TestStaff.Telephone = 1234567891;
             //assign the data to the property 
             AllStaff.ThisStaff = TestStaff;
@@ -86,10 +86,10 @@ namespace Phone_Testing
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.Active = true;
-            TestItem.StaffID = 1;
+            TestItem.StaffID = 847;
             TestItem.County = "Buckinghamshire";
-            TestItem.Street = "Gosling Street";
-            TestItem.PostCode = "LE3 0GH";
+            TestItem.Street = "Western Road";
+            TestItem.PostCode = "LE3 0BH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
@@ -118,10 +118,10 @@ namespace Phone_Testing
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.Active = true;
-            TestItem.StaffID = 38;
+            TestItem.StaffID = 847;
             TestItem.County = "Buckinghamshire";
-            TestItem.Street = "Gosling Street";
-            TestItem.PostCode = "LE3 0GH";
+            TestItem.Street = "Western Road";
+            TestItem.PostCode = "LE3 0BH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
@@ -154,10 +154,10 @@ namespace Phone_Testing
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.Active = true;
-            TestItem.StaffID = 49;
+            TestItem.StaffID = 847;
             TestItem.County = "Buckinghamshire";
-            TestItem.Street = "Gosling Street";
-            TestItem.PostCode = "LE3 0GH";
+            TestItem.Street = "Western Road";
+            TestItem.PostCode = "LE3 0BH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
@@ -171,14 +171,14 @@ namespace Phone_Testing
             TestItem.StaffID = PrimaryKey;
             //modify the test data 
             TestItem.Active = true;
-            TestItem.StaffID = 4;
-            TestItem.County = "London";
-            TestItem.Street = "Richmond Road";
-            TestItem.PostCode = "HA4 5JX";
-            TestItem.DateOfBirth = "15/04/1992";
+            TestItem.StaffID = 850;
+            TestItem.County = "Manchester";
+            TestItem.Street = "Ellen Street";
+            TestItem.PostCode = "HP3 5LS";
+            TestItem.DateOfBirth = "06/05/1979";
             TestItem.FirstName = "Jane";
             TestItem.LastName = "Doe";
-            TestItem.Gender = "Male";
+            TestItem.Gender = "Female";
             //set the record based on the new test data
             AllStaff.ThisStaff = TestItem;
             //update record 
@@ -227,8 +227,8 @@ namespace Phone_Testing
             //var to store outcome
             Boolean OK = true;
             //apply a post code that does exists
-            FilteredStaff.ReportByPostCode("SW39DE");
-            //check that the correct numbe of records are found
+            FilteredStaff.ReportByPostCode("LE3 0BH");
+            //check that the correct numbeR of records are found
             if (FilteredStaff.Count == 2)
             {
                 //check that the first record is ID 847
@@ -237,8 +237,8 @@ namespace Phone_Testing
                     OK = false;
                 }
 
-                //check the first record is ID 848
-                if (FilteredStaff.StaffList[1].StaffID != 848)
+                //check the first record is ID 852
+                if (FilteredStaff.StaffList[1].StaffID != 849)
                 {
                     OK = false;
                 }
