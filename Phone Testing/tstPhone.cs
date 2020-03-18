@@ -917,7 +917,7 @@ namespace Phone_Testing
             //string variable to store any error message
             String Error = "";
             //this should pass
-            string Price = "0.00";
+            string Price = "0.01";
             //invoke the method
             Error = APhone.Valid(Capacity, Price, Colour, DateAdded, Description, Make, Model);
             //test to see that the result is correct
@@ -1371,7 +1371,7 @@ namespace Phone_Testing
             //invoke the method
             Found = APhone.Find(PhoneID);
             //check the PhoneID
-            if (APhone.Description != "This is the latest phone.")
+            if (APhone.Description != "Latest Phone")
             {
                 OK = false;
             }
