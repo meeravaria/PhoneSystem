@@ -89,7 +89,7 @@ namespace Phone_Testing
             TestItem.StaffID = 847;
             TestItem.County = "Buckinghamshire";
             TestItem.Street = "Western Road";
-            TestItem.PostCode = "LE3 0BH";
+            TestItem.PostCode = "LE3 0GH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
@@ -121,7 +121,7 @@ namespace Phone_Testing
             TestItem.StaffID = 847;
             TestItem.County = "Buckinghamshire";
             TestItem.Street = "Western Road";
-            TestItem.PostCode = "LE3 0BH";
+            TestItem.PostCode = "LE3 0GH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
@@ -157,7 +157,7 @@ namespace Phone_Testing
             TestItem.StaffID = 847;
             TestItem.County = "Buckinghamshire";
             TestItem.Street = "Western Road";
-            TestItem.PostCode = "LE3 0BH";
+            TestItem.PostCode = "LE3 0GH";
             TestItem.DateOfBirth = "25/12/1996";
             TestItem.FirstName = "Meera";
             TestItem.LastName = "Varia";
@@ -237,8 +237,8 @@ namespace Phone_Testing
                     OK = false;
                 }
 
-                //check the first record is ID 852
-                if (FilteredStaff.StaffList[1].StaffID != 849)
+                //check the first record is ID 848
+                if (FilteredStaff.StaffList[1].StaffID != 848)
                 {
                     OK = false;
                 }
