@@ -218,8 +218,53 @@ namespace PhoneClasses
             //create a string variable to store the error 
             String Error = "";
             //create a temporary variable to store data values
-            DateTime DateTemp; 
+            DateTime DateTemp;
 
+
+            ///Capacity Validation 
+            try
+            {
+                Int32 TempCapacity = Convert.ToInt32(Capacity);
+                //if Capacity is blank
+                if (TempCapacity == 0)
+                {
+                    //record the error
+                    Error = Error + " The capacity may not be blank." + " ";
+                }
+
+                if (TempCapacity < 0 | TempCapacity > 999)
+                {
+                    //set the error message 
+                    Error = Error + "The capacity must between 1 to 3 characters" + " ";
+                }
+
+            }
+            catch
+            {
+                //record the error 
+                Error = Error + "The data was not a valid capacity : ";
+            }
+
+            ///Price Validation 
+            try
+            {
+
+                decimal PriceTemp = Convert.ToDecimal(Price);
+                if (PriceTemp < 0.01m | PriceTemp > 999.99m)
+                {
+                    //set the error message 
+                    Error = Error + "The price must between £0.01 to £999.99." + " ";
+                }
+
+            }
+
+            catch
+            {
+                //record the error 
+                Error = Error + "The data was not a valid price : ";
+            }
+
+            ///Colour Validation
             //if Colour is blank
             if (Colour.Length == 0)
             {
@@ -233,6 +278,7 @@ namespace PhoneClasses
                 Error = Error + "Colour must between 1 to 50 characters." + " ";
            }
 
+           ///Date Validation
             try
             {
                  //copy the dateAdded value to the DateTemp variable
@@ -259,6 +305,8 @@ namespace PhoneClasses
                 Error = Error + "The data was not a valid date : "; 
             }
 
+
+            ///Desciription Validation
             //if Description is blank
             if (Description.Length == 0)
             {
@@ -272,7 +320,7 @@ namespace PhoneClasses
                 Error = Error + "The description must between 1 to 500 characters." + " ";
             }
 
-
+            ///Make Validation
             //if Make is blank
             if (Make.Length == 0)
             {
@@ -293,56 +341,14 @@ namespace PhoneClasses
                 Error = Error + " The model may not be blank." + " ";
             }
 
+
+            ///Model Validation
             if (Model.Length < 1 | Model.Length > 10)
             {
                 //set the error message 
                 Error = Error + "The model must between 1 to 50 characters." + " ";
             }
-
-            try
-            {
-
-                decimal PriceTemp =Convert.ToDecimal( Price);
-                if (PriceTemp < 0.00m | PriceTemp > 999.99m)
-                {
-                    //set the error message 
-                    Error = Error + "The price must between £0.00 to £999.99." + " ";
-                }
-
-            }
-
-            catch
-            {
-                //record the error 
-                Error = Error + "The data was not a valid price : ";
-            }
-
-
-            try
-            {
-                Int32 TempCapacity = Convert.ToInt32(Capacity);
-                //if Capacity is blank
-                if (TempCapacity == 0)
-                {
-                    //record the error
-                    Error = Error + " The capacity may not be blank." + " ";
-                }
-
-                if (TempCapacity < 0 | TempCapacity > 999)
-                {
-                    //set the error message 
-                    Error = Error + "The capacity must between 1 to 3 characters" + " ";
-                }
-
-            }
-            catch
-            {
-                //record the error 
-                Error = Error + "The data was not a valid capacity : ";
-            }
-
-
-
+            
             //return any error messages
             return Error;
         }

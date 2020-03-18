@@ -11,8 +11,8 @@
         <div>
             <asp:Label ID="lblEnterPhoneDetails" runat="server" Font-Bold="False" Font-Italic="True" Text="Please enter the fields below : "></asp:Label>
         </div>
-        <asp:Label ID="lblCapacity" runat="server" Font-Bold="True" style="z-index: 1; left: 138px; top: 62px; position: absolute; bottom: 780px" Text="Capacity : "></asp:Label>
-        <asp:Label ID="lblPrice" runat="server" Font-Bold="True" style="z-index: 1; left: 162px; top: 94px; position: absolute; bottom: 751px;" Text="Price :"></asp:Label>
+        <asp:Label ID="lblCapacity" runat="server" Font-Bold="True" style="z-index: 1; left: 138px; top: 62px; position: absolute; bottom: 582px" Text="Capacity : "></asp:Label>
+        <asp:Label ID="lblPrice" runat="server" Font-Bold="True" style="z-index: 1; left: 163px; top: 94px; position: absolute; bottom: 548px;" Text="Price :"></asp:Label>
         <asp:Label ID="lblColour" runat="server" Font-Bold="True" style="z-index: 1; left: 150px; top: 126px; position: absolute; bottom: 716px; right: 837px;" Text="Colour :"></asp:Label>
         <asp:Label ID="lblDateAdded" runat="server" Font-Bold="True" style="z-index: 1; left: 157px; top: 160px; position: absolute" Text="Date : "></asp:Label>
         <asp:Label ID="lblMake" runat="server" Font-Bold="True" style="z-index: 1; left: 148px; top: 262px; position: absolute; width: 50px;" Text="Make :"></asp:Label>
